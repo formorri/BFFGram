@@ -1,0 +1,123 @@
+
+
+// $uk-breakpoint-s: 640px;
+// $uk-breakpoint-m: 960px;
+// $uk-breakpoint-l: 1200px;
+// $uk-breakpoint-xl: 1600px
+
+// xs size
+$screen-xs-max: 639.95px;
+
+// uikit small
+$screen-sm-min: 640px; 
+$screen-sm-max: 959.95px;
+
+// uikit medium
+$screen-md-min: 960px;
+$screen-md-max: 1199.95px;
+
+// uikit large
+$screen-lg-min: 1200px;
+$screen-lg-max: 1599.95px;
+
+// uikit xl
+$screen-xl-min: 1600px;
+$screen-xl-max: 1999.95px;
+
+// XXL
+$screen-xxl-min: 2000px;
+$screen-xxl-max: 5000px;
+
+
+// media devices
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media screen and (min-width: #{$screen-xxl-min}) and (max-width: #{$screen-xxl-max}) {
+    @content;
+  }
+}
+
+// media lt queries
+@mixin lt-sm {
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin lt-md {
+  @media screen and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin lt-lg {
+  @media screen and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lt-xl {
+  @media screen and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// media gt queries
+@mixin gt-xs {
+  @media screen and (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin gt-sm {
+  @media screen and (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin gt-md {
+  @media screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin gt-lg {
+  @media screen and (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+@mixin gt-xl {
+  @media screen and (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+
