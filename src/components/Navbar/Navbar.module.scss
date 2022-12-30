@@ -3,52 +3,55 @@
 @mixin flex-center {}
 
 .container {
-    background-color: $color-primary;
+    background-color: transparent;
     width: 100vw;
     display: flex;
     vertical-align: middle;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 4rem;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 
     &__logo {
         width: 5rem;
-        background-image: url('../../assets/logo-black.svg');
+        background-image: url(../../assets/images/logo-black.svg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
     }
 
     &__links {
         width: fit-content;
-        gap: 1rem;
+        gap: 20px;
+        column-gap: 20px;
         display: flex;
         flex-wrap: nowrap;
-
+        
         li {
             list-style: none;
             display: flex;
             align-items: center;
         }
-
+        
         .links {
             a{
-                font-size: 13px;
-                line-height: 14px;
+                @include navbar-text;
                 font-weight: normal;
                 color: $dark-primary;
+                text-transform: capitalize;
             }
         }
 
         .contact {
-            background-color: $dark-primary;
-            padding: 0.5rem;
-            border-radius: 5px;
+            @include button-text;
+            @include glassmorphism;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid $dark-primary;
             a{
-                color: white;
+                color: $dark-primary;
                 font-weight: bold;
-
             }
 
         }

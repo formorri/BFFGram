@@ -1,0 +1,138 @@
+@use 'media-query' as *;
+
+$line-height-multiplier: 1.18;
+$line-height-multiplier-title: 1.8;
+$font-size-multiplier: 0.2; //% increase or reduction depending on screen size
+$small-font: 1 - $font-size-multiplier;
+$normal-font: 1;
+$large-font: 1 + $font-size-multiplier;
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(../../assets/fonts/SFUIDisplay-Medium.eot);
+    src: url(../../assets/fonts/SFUIDisplay-Medium.eot?#iefix) format('embedded-opentype'),
+        url(../../assets/fonts/SFUIDisplay-Medium.woff2) format('woff2'),
+        url(../../assets/fonts/SFUIDisplay-Medium.woff) format('woff'),
+        url(../../assets/fonts/SFUIDisplay-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(../../assets/fonts/SFUIDisplay-Bold.eot);
+    src: url(../../assets/fonts/SFUIDisplay-Bold.eot?#iefix) format('embedded-opentype'),
+        url(../../assets/fonts/SFUIDisplay-Bold.woff2) format('woff2'),
+        url(../../assets/fonts/SFUIDisplay-Bold.woff) format('woff'),
+        url(../../assets/fonts/SFUIDisplay-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(../../assets/fonts/SFUIDisplay-Thin.eot);
+    src: url(../../assets/fonts/SFUIDisplay-Thin.eot?#iefix) format('embedded-opentype'),
+        url(../../assets/fonts/SFUIDisplay-Thin.woff2) format('woff2'),
+        url(../../assets/fonts/SFUIDisplay-Thin.woff) format('woff'),
+        url(../../assets/fonts/SFUIDisplay-Thin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url(../../assets/fonts/SFUIDisplay-Light.eot);
+    src: url(../../assets/fonts/SFUIDisplay-Light.eot?#iefix) format('embedded-opentype'),
+        url(../../assets/fonts/SFUIDisplay-Light.woff2) format('woff2'),
+        url(../../assets/fonts/SFUIDisplay-Light.woff) format('woff'),
+        url(../../assets/fonts/SFUIDisplay-Light.ttf) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@mixin font-settings-title($desktop-font-size) {
+    font-size: calc($desktop-font-size * $small-font);
+    // line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier-title);
+
+    @include gt-xs {
+        font-size: $desktop-font-size;
+        // line-height: calc($desktop-font-size * $line-height-multiplier-title);
+    }
+
+    @include gt-lg {
+        font-size: calc($desktop-font-size * $large-font);
+        // line-height: calc(($desktop-font-size * $large-font) * $line-height-multiplier-title);
+    }
+}
+
+@mixin font-settings($desktop-font-size) {
+    font-size: calc($desktop-font-size * $small-font);
+    line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier);
+
+    @include gt-xs {
+        font-size: $desktop-font-size;
+        line-height: calc($desktop-font-size * $line-height-multiplier);
+    }
+
+    @include gt-lg {
+        font-size: calc($desktop-font-size * $large-font);
+        line-height: calc(($desktop-font-size * $large-font) * $line-height-multiplier);
+    }
+}
+
+
+
+@mixin header-text {
+    @include font-settings-title ($desktop-font-size: 30px);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@mixin header-secondary-text {
+    @include font-settings ($desktop-font-size: 25px);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@mixin navbar-text {
+    @include font-settings ($desktop-font-size: 20px);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin button-text {
+    @include font-settings ($desktop-font-size: 20px);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@mixin paragraph-medium-text {
+    @include font-settings ($desktop-font-size: 18px);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin paragraph-light-text {
+    @include font-settings ($desktop-font-size: 18px);
+    font-weight: 200;
+    font-style: normal;
+}
+
+@mixin paragraph-light-secondary-text {
+    @include font-settings ($desktop-font-size: 16px);
+    font-weight: 200;
+    font-style: normal;
+}
+
+@mixin paragraph-light-tertiary-text {
+    @include font-settings ($desktop-font-size: 16px);
+    font-weight: 100;
+    font-style: normal;
+}

@@ -1,1 +1,152 @@
 @use 'settings/index.scss' as *;
+
+
+.hero {
+    .title {
+        line-height: 0;
+        @include header-text;
+    }
+
+    .description {
+        @include paragraph-medium-text;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+        justify-content: flex-start;
+
+        .buttons,
+        .buttons-dark {
+            border-radius: $border-radius;
+            @include button-text;
+            width: fit-content;
+            padding: 0.4rem 1rem;
+
+            a {
+                display: flex;
+                vertical-align: middle;
+                align-items: center;
+                justify-content: center;
+                column-gap: 0.5rem;
+            }
+        }
+
+        .buttons {
+            border: 2px solid $dark-primary;
+            @include glassmorphism;
+
+            a {
+                color: $dark-primary;
+            }
+        }
+
+        .buttons-dark {
+            background-color: $dark-primary;
+
+            a {
+                color: $white-primary;
+            }
+        }
+    }
+
+}
+
+.stats {
+    position: relative;
+
+    h2,
+    h3 {
+        margin: 0;
+    }
+
+    &__1,
+    &__2 {
+        @include glassmorphism;
+        @include shadow;
+        background: rgba(0, 0, 0, 0.05);
+        border: 2px solid $white-primary;
+        border-radius: $border-radiusx2;
+        padding: 1.5rem;
+        color: white;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        vertical-align: middle;
+        text-align: center;
+        justify-content: center;
+    }
+
+    $stat-font: 60px;
+    $text-font: 30px;
+    $box-size: 20rem;
+    $multiplier: 0.8;
+    $box-multiplier: 0.7;
+
+    .circle-1 {
+        position: absolute;
+        width: 18rem;
+        height: auto;
+        top: 4.5rem;
+        right: -2rem;
+        z-index: 0;
+    }
+    &__1 {
+        height: calc($box-size * $box-multiplier);
+        width: calc($box-size * $box-multiplier);
+        align-self: flex-end;
+        margin-top: 3.5rem;
+        margin-right: 6rem;
+        z-index: 1;
+
+
+        h2 {
+            font-weight: bold;
+            font-size: calc($stat-font * $multiplier);
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: calc($text-font * $multiplier);
+            line-height: calc($text-font * $line-height-multiplier * $multiplier);
+        }
+    }
+
+    &__2 {
+        height: $box-size;
+        width: $box-size;
+        margin-left: 4rem;
+        margin-top: -3.5rem;
+        z-index: 0;
+        position: relative;
+
+        .circle-2, .circle-3{
+            position: absolute;
+        }
+
+        .circle-2{
+            width: 8rem;
+            height: auto;
+            top: -4rem;
+            left: 1rem;
+        }
+        .circle-3{
+            width: 15rem;
+            height: auto;
+            bottom: -5rem;
+            right: -10rem;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: calc($stat-font);
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: calc($text-font);
+            line-height: calc($text-font * $line-height-multiplier);
+        }
+    }
+}

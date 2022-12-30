@@ -1,0 +1,57 @@
+@use '../../styles/settings/index.scss' as *;
+
+$circle-size: 90px;
+
+.container {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-color: $white-primary;
+    
+    .circle-1,
+    .circle-2,
+    .circle-3 {
+        border-radius: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .glassmorphism{
+        position: absolute;
+        @include glassmorphism;
+        min-height: 100vh;
+        min-width: 100vw;
+        z-index: 0;
+    }
+
+    .circle-1 {
+        // the purple circle
+        $ratio: 5.5;
+        width: calc($circle-size * $ratio);
+        height: calc($circle-size * $ratio);
+        background-color: $circle-1;
+        bottom: 2%;
+        right: 2%;
+    }
+
+    .circle-2 {
+        // the pink circle
+        $ratio: 3;
+        width: calc($circle-size * $ratio);
+        height: calc($circle-size * $ratio);
+        background-color: $circle-2;
+        top: 5%;
+        right: 10%;
+    }
+
+    .circle-3 {
+        // the cyan circle
+        $ratio: 4;
+        $size: 400px;
+        width: calc($circle-size * $ratio);
+        height: calc($circle-size * $ratio);
+        background-color: $circle-3;
+        right: 25%;
+        top: 20%;
+    }
+}
