@@ -1,12 +1,102 @@
 $border-radius: 10px;
 $border-radiusx2: 20px;
 
+$border-weight: 2px solid;
+
+$tiny-gap: 0.2rem;
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-30px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@mixin float-animation ($time) {
+    animation: float $time ease-in-out infinite;
+}
+
 @mixin glassmorphism {
     // background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(20px);
 }
 
-@mixin shadow{
-    box-shadow: 0 0px 3px 0 rgba(0 , 0, 0, 0.26);
+@mixin shadow {
+    box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.26);
+}
+
+@mixin chips {
+    @include button-text;
+    @include glassmorphism;
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius;
+    border: $border-weight $dark-primary;
+    width: max-content;
+    p {
+        color: $dark-primary;
+        font-weight: bold;
+    }
+}
+
+@mixin light-button {
+    @include button-text;
+    @include glassmorphism;
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius;
+    border: $border-weight $dark-primary;
+    transition: 0.3s ease-in-out;
+
+    a {
+        color: $dark-primary;
+        font-weight: bold;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5rem;
+    }
+
+    &:hover {
+        background-color: $dark-primary;
+
+        a {
+            color: $white-primary;
+        }
+    }
+}
+
+@mixin dark-button {
+    @include button-text;
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius;
+    transition: 0.3s ease-in-out;
+    background-color: $dark-primary;
+
+    a {
+        color: $white-primary;
+        font-weight: bold;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5rem;
+    }
+
+    &:hover {
+        background-color: $white-primary;
+        border: $border-weight $dark-primary;
+
+        a {
+            color: $dark-primary;
+            font-weight: bold;
+        }
+    }
 }

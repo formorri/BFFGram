@@ -1,0 +1,22 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+}
+
+.arrow:first-of-type {
+  left: 0;
+}
+
+.arrow:last-of-type {
+  right: 0;
+}
+
+.slider {
+  display: flex;
+}

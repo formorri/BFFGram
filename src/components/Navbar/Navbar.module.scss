@@ -15,10 +15,16 @@
     z-index: 1000;
 
     &__logo {
-        width: 5rem;
-        background-image: url(../../assets/images/logo-black.svg);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
+        padding: 0.5rem 0;
+        img {
+            height: auto;
+            width: 12rem;
+            margin-bottom: -3rem;
+        }
+
+        // background-image: url(../../assets/images/logo-black.svg);
+        // background-repeat: no-repeat;
+        // background-position: 50% 50%;
     }
 
     &__links {
@@ -27,15 +33,15 @@
         column-gap: 20px;
         display: flex;
         flex-wrap: nowrap;
-        
+
         li {
             list-style: none;
             display: flex;
             align-items: center;
         }
-        
+
         .links {
-            a{
+            a {
                 @include navbar-text;
                 font-weight: normal;
                 color: $dark-primary;
@@ -44,16 +50,7 @@
         }
 
         .contact {
-            @include button-text;
-            @include glassmorphism;
-            padding: 1rem;
-            border-radius: 10px;
-            border: 1px solid $dark-primary;
-            a{
-                color: $dark-primary;
-                font-weight: bold;
-            }
-
+            @include light-button;
         }
     }
 }

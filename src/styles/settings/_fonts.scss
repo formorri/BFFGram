@@ -58,16 +58,16 @@ $large-font: 1 + $font-size-multiplier;
 
 @mixin font-settings-title($desktop-font-size) {
     font-size: calc($desktop-font-size * $small-font);
-    // line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier-title);
+    line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier-title);
 
     @include gt-xs {
         font-size: $desktop-font-size;
-        // line-height: calc($desktop-font-size * $line-height-multiplier-title);
+        line-height: calc($desktop-font-size * $line-height-multiplier-title);
     }
 
     @include gt-lg {
         font-size: calc($desktop-font-size * $large-font);
-        // line-height: calc(($desktop-font-size * $large-font) * $line-height-multiplier-title);
+        line-height: calc(($desktop-font-size * $large-font) * $line-height-multiplier-title);
     }
 }
 
@@ -97,6 +97,7 @@ $large-font: 1 + $font-size-multiplier;
 
 @mixin header-secondary-text {
     @include font-settings ($desktop-font-size: 25px);
+    text-transform: capitalize;
     font-weight: bold;
     font-style: normal;
 }
@@ -113,11 +114,18 @@ $large-font: 1 + $font-size-multiplier;
     font-style: normal;
 }
 
+@mixin quote-text {
+    @include font-settings ($desktop-font-size: 25px);
+    font-weight: 500;
+    font-style: normal;
+}
+
 @mixin paragraph-medium-text {
     @include font-settings ($desktop-font-size: 18px);
     font-weight: 500;
     font-style: normal;
 }
+
 
 @mixin paragraph-light-text {
     @include font-settings ($desktop-font-size: 18px);

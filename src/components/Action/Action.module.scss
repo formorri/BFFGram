@@ -1,0 +1,21 @@
+@use '../../styles/settings/index.scss' as *;
+
+.container{
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+    .title {
+        @include header-text;
+    
+        h1 {
+            margin: 2rem 0;
+        }
+    }
+    
+    .squiggle{
+        width: 10rem;
+        height: auto;
+    }
+}
+

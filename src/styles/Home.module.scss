@@ -1,56 +1,43 @@
 @use 'settings/index.scss' as *;
 
+.circle-1 {
+    @include float-animation(4s)
+}
 
-.hero {
-    .title {
-        line-height: 0;
-        @include header-text;
+.circle-2 {
+    @include float-animation(5s)
+}
+
+.circle-3 {
+    @include float-animation(6s)
+}
+
+
+.title {
+    @include header-text;
+
+    h1 {
+        margin: 2rem 0;
     }
+}
 
-    .description {
-        @include paragraph-medium-text;
-    }
+.description {
+    @include paragraph-medium-text;
+}
 
-    .buttons-container {
-        display: flex;
-        flex-direction: row;
-        column-gap: 1rem;
-        justify-content: flex-start;
+.buttons {
+    @include light-button;
+}
 
-        .buttons,
-        .buttons-dark {
-            border-radius: $border-radius;
-            @include button-text;
-            width: fit-content;
-            padding: 0.4rem 1rem;
+.buttons-dark {
+    @include dark-button;
+}
 
-            a {
-                display: flex;
-                vertical-align: middle;
-                align-items: center;
-                justify-content: center;
-                column-gap: 0.5rem;
-            }
-        }
-
-        .buttons {
-            border: 2px solid $dark-primary;
-            @include glassmorphism;
-
-            a {
-                color: $dark-primary;
-            }
-        }
-
-        .buttons-dark {
-            background-color: $dark-primary;
-
-            a {
-                color: $white-primary;
-            }
-        }
-    }
-
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: flex-start;
 }
 
 .stats {
@@ -66,7 +53,7 @@
         @include glassmorphism;
         @include shadow;
         background: rgba(0, 0, 0, 0.05);
-        border: 2px solid $white-primary;
+        border: $border-weight $white-primary;
         border-radius: $border-radiusx2;
         padding: 1.5rem;
         color: white;
@@ -78,28 +65,31 @@
         justify-content: center;
     }
 
+    &__container {
+        align-self: flex-end;
+        margin-top: 3.5rem;
+        margin-right: 6rem;
+        z-index: 1;
+
+        .circle-1 {
+            position: absolute;
+            width: 18rem;
+            height: auto;
+            top: -4.5rem;
+            right: -2rem;
+            z-index: -1;
+        }
+    }
+
     $stat-font: 60px;
     $text-font: 30px;
     $box-size: 20rem;
     $multiplier: 0.8;
     $box-multiplier: 0.7;
 
-    .circle-1 {
-        position: absolute;
-        width: 18rem;
-        height: auto;
-        top: 4.5rem;
-        right: -2rem;
-        z-index: 0;
-    }
     &__1 {
         height: calc($box-size * $box-multiplier);
         width: calc($box-size * $box-multiplier);
-        align-self: flex-end;
-        margin-top: 3.5rem;
-        margin-right: 6rem;
-        z-index: 1;
-
 
         h2 {
             font-weight: bold;
@@ -116,22 +106,25 @@
     &__2 {
         height: $box-size;
         width: $box-size;
-        margin-left: 4rem;
+        align-self: flex-end;
+        margin-right: 15rem;
         margin-top: -3.5rem;
         z-index: 0;
         position: relative;
 
-        .circle-2, .circle-3{
+        .circle-2,
+        .circle-3 {
             position: absolute;
         }
 
-        .circle-2{
+        .circle-2 {
             width: 8rem;
             height: auto;
             top: -4rem;
             left: 1rem;
         }
-        .circle-3{
+
+        .circle-3 {
             width: 15rem;
             height: auto;
             bottom: -5rem;
@@ -150,3 +143,228 @@
         }
     }
 }
+
+.flex-top {
+    div {
+        justify-content: flex-start;
+    }
+}
+
+.section1-header {
+    img {
+        @include shadow;
+        border-radius: $border-radius;
+    }
+}
+
+.section1-container {
+    $overflow: 5rem;
+
+    div {
+        display: grid;
+        column-gap: $tiny-gap;
+        row-gap: $tiny-gap;
+    }
+
+    .column2 {
+        margin-top: $overflow;
+        margin-bottom: calc(-1 * $overflow);
+    }
+}
+
+.quote {
+    margin-top: 3rem;
+    padding: 3rem;
+    border-radius: $border-radiusx2;
+
+    &__decor {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .flex{
+            display: flex;
+        }
+
+        &--chips {
+            flex-direction: column;
+            row-gap: 1rem;
+            display: flex;
+            @include chips;
+            margin: 0.5rem 0;
+            align-self: end;
+        }
+
+
+        &--image {
+            align-self: flex-end;
+        }
+    }
+
+    &__text {
+        @include quote-text;
+    }
+}
+
+.section2 {
+    &__container {
+        // padding: 4rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .circle-1,
+        .circle-3 {
+            position: absolute;
+        }
+
+        .circle-1 {
+            bottom: -3rem;
+            right: -2.5rem;
+        }
+
+        .circle-3 {
+            width: 10rem;
+            height: auto;
+            left: 3rem;
+            top: 0;
+        }
+
+        &--founder {
+            .founder {
+                @include glassmorphism;
+                @include shadow;
+                border-radius: $border-radiusx2;
+                border: $border-weight $white-primary;
+                display: flex;
+                justify-content: center;
+                padding: 2rem 0 0;
+                width: min-content;
+                bottom: 0;
+                height: auto;
+                // width: 30rem;
+            }
+
+            .title {
+                align-self: flex-start;
+
+                h2 {
+                    @include button-text;
+                    margin: 1rem 0 0.5rem 0;
+                }
+
+                p {
+                    @include paragraph-light-secondary-text;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.section3 {
+    &__grid {
+        column-gap: $tiny-gap;
+
+        &>div {
+            @include paragraph-medium-text;
+            margin-top: 1rem;
+            row-gap: $tiny-gap;
+            justify-content: flex-start;
+
+            div {
+                @include shadow;
+                padding: 2rem;
+                height: min-content;
+
+                .buttons {
+                    @include light-button;
+                    margin-top: 1rem;
+                    width: max-content;
+                }
+            }
+        }
+    }
+}
+
+
+.section5 {
+    h2 {
+        @include header-secondary-text;
+    }
+
+    p {
+        @include paragraph-light-text
+    }
+
+    
+    .accordion {
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        border-bottom: $border-weight $grey-primary;
+        
+        &::before{
+            background-color: transparent;
+        }
+
+        svg{
+            width: 3rem;
+            height: auto;
+            fill: $dark-primary;
+        }
+        .accordion-summary{
+            padding: 0;
+            div{
+                margin: 0;
+            }
+        }
+        .accordion-details{
+            padding: 0 0 1rem 0;
+        }
+    }
+}
+
+.section5-column2{
+    display: flex;
+    align-items: center;
+    &__image{
+        margin-right: -5rem;
+    }
+}
+
+.section6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title{
+        display: flex;
+        align-items: center;
+        .star{
+            width: auto;
+            height: 6rem;
+        }
+    }
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1rem;
+        margin: 0 5rem;
+        .quote:nth-child(2){
+            $overflow: 5rem;
+            margin-top: $overflow;
+            margin-bottom: calc(-1 * $overflow);
+        }
+        .quote{
+            &__decor{
+                &--image{
+                    width: auto;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}
+

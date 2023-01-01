@@ -1,0 +1,37 @@
+@use '../../styles/settings/index.scss' as *;
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    .scroll{
+        $size: 8rem;
+        @include paragraph-medium-text;
+        @include shadow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        border: $border-weight $white-primary;
+        background-color: $dark-primary;
+        color: $white-primary;
+        width: $size;
+        height: $size;
+        padding: 1rem;
+        text-align: center;
+        p{
+            margin: 0;
+        }
+        svg{
+            $size: 2rem;
+            width: $size;
+            height: $size;
+        }
+        
+
+
+    }
+}
