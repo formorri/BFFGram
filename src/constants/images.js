@@ -8,6 +8,7 @@ import circle3 from '../assets/images/circle-3.png';
 import quotes from '../assets/images/quotes.png';
 import squiggle from '../assets/images/squiggle.png';
 import star from '../assets/images/star.png';
+import plane from '../assets/images/plane.png';
 
 import homeFounder from '../assets/images/home-founder.png';
 import homeNews1 from '../assets/images/home-news-1.png';
@@ -39,6 +40,7 @@ export default {
     quotes,
     squiggle,
     star,
+    plane,
     homeFounder,
     homeNews1,
     homeNews2,

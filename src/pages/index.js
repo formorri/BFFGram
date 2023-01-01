@@ -45,9 +45,9 @@ export default function Home() {
 
       <Navbar />
 
-      <Section>
+      <Section className={styles.hero}>
         <Grid12>
-          <div className={styles.hero}>
+          <div>
             <div className={styles.title}>
               <h1>All In One Application</h1>
             </div>
@@ -227,14 +227,14 @@ export default function Home() {
       </Section>
 
       <Section>
-        <Grid12>
+        <Grid12 className={styles.section3}>
           <Image
             src={images.homePic2}
             alt="bffgram-tokens"
             className={styles['section3__image']}
             loading="lazy"
           />
-          <div className={styles.section3}>
+          <div>
             <div className={styles.title}>
               <h1>Tokenomics</h1>
             </div>
@@ -450,7 +450,6 @@ export default function Home() {
       <Section className={styles['call-to-action']}>
         <Action />
       </Section>
-
 
       <Footer />
     </Container>

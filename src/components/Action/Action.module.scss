@@ -7,6 +7,7 @@ text-align: center;
 align-items: center;
     .title {
         @include header-text;
+        max-width: 50rem;
     
         h1 {
             margin: 2rem 0;

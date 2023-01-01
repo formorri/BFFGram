@@ -1,5 +1,15 @@
+@use '../../styles/settings/index.scss' as *;
+
 .section{
-    margin: 5rem 0;
+    margin: 3rem 0;
     z-index: 1;
-    // padding: 20rem;
+    padding: 0 $small-padding;
+}
+
+@include gt-sm{
+    .section{
+        margin: 5rem 0;
+        z-index: 1;
+        padding: 0 $large-padding;
+    }
 }

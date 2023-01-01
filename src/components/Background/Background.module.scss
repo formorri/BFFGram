@@ -1,7 +1,6 @@
 @use '../../styles/settings/index.scss' as *;
 
-$circle-size: 90px;
-
+$circle-size: 60px;
 .container {
     min-height: 100vh;
     min-width: 100vw;
@@ -32,6 +31,41 @@ $circle-size: 90px;
         height: calc($circle-size * $ratio);
         background-color: $circle-1;
         top: 16rem;
+        right: 1rem;
+    }
+
+    .circle-2 {
+        // the pink circle
+        $ratio: 3;
+        width: calc($circle-size * $ratio);
+        height: calc($circle-size * $ratio);
+        background-color: $circle-2;
+        top: 4rem;
+        right: 4rem;
+    }
+
+    .circle-3 {
+        // the cyan circle
+        $ratio: 4;
+        $size: 400px;
+        width: calc($circle-size * $ratio);
+        height: calc($circle-size * $ratio);
+        background-color: $circle-3;
+        top: 8rem;
+        right: 14rem;
+    }
+}
+
+@include gt-sm{
+    $circle-size: 90px;
+.container {
+    .circle-1 {
+        // the purple circle
+        $ratio: 5.5;
+        width: calc($circle-size * $ratio);
+        height: calc($circle-size * $ratio);
+        background-color: $circle-1;
+        top: 16rem;
         right: 2rem;
     }
 
@@ -55,4 +89,5 @@ $circle-size: 90px;
         top: 10rem;
         right: 20rem;
     }
+}
 }

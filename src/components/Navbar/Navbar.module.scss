@@ -1,14 +1,12 @@
 @use '../../styles/settings/index.scss' as *;
 
-@mixin flex-center {}
-
 .container {
     background-color: transparent;
     width: 100vw;
     display: flex;
     vertical-align: middle;
     justify-content: space-between;
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,41 +14,103 @@
 
     &__logo {
         padding: 0.5rem 0;
+
         img {
             height: auto;
-            width: 12rem;
-            margin-bottom: -3rem;
+            width: 10rem;
+            margin-bottom: -1rem;
         }
-
-        // background-image: url(../../assets/images/logo-black.svg);
-        // background-repeat: no-repeat;
-        // background-position: 50% 50%;
     }
 
     &__links {
-        width: fit-content;
-        gap: 20px;
-        column-gap: 20px;
-        display: flex;
-        flex-wrap: nowrap;
-
-        li {
-            list-style: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .links {
-            a {
-                @include navbar-text;
-                font-weight: normal;
-                color: $dark-primary;
-                text-transform: capitalize;
-            }
-        }
-
-        .contact {
-            @include light-button;
+        display: none;
+    }
+    
+    @include lt-md {
+        &__links {
+            display: none;
         }
     }
 }
+
+.burger {
+    @include glassmorphism;
+    display: flex;
+    padding: rem;
+    border-radius: $border-radius;
+    border: $border-weight $dark-primary;
+    color: $dark-primary;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 0.5rem;
+
+    @include gt-sm {
+        display: none;
+    }
+}
+.phone-menu {
+    ul {
+        li {
+            padding-bottom: 1rem;
+
+            a {
+                @include navbar-text;
+                @include hover-scale;
+                color: $dark-primary;
+                text-transform: capitalize;
+
+            }
+
+        }
+    }
+}
+
+@include gt-sm{
+    .container {
+        padding: 0.5rem 4rem;
+    
+        &__logo {
+            padding: 0.5rem 0;
+    
+            img {
+                width: 12rem;
+                margin-bottom: -3rem;
+            }
+        }
+    
+        &__links {
+            width: fit-content;
+            gap: 20px;
+            column-gap: 20px;
+            display: flex;
+            flex-wrap: nowrap;
+    
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+            }
+    
+            .links {
+                a {
+                    @include navbar-text;
+                    font-weight: normal;
+                    color: $dark-primary;
+                    text-transform: capitalize;
+                }
+            }
+    
+            .contact {
+                @include light-button;
+            }
+        }
+    
+        
+        
+        @include lt-md {
+            &__links {
+                display: none;
+            }
+        }
+    }
+}
+

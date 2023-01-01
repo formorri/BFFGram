@@ -4,25 +4,28 @@
   @include glassmorphism;
   @include shadow;
   background-color: rgba(255, 255, 255, 0.4);
-  padding: 3rem;
+  padding: 2rem;
   text-align: left;
   color: $dark-primary;
   text-decoration: none;
   border: $border-weight $white-primary;
   border-radius: $border-radius;
-  transition: color 0.15s ease, border-color 0.15s ease;
   
   h2 {
     @include header-secondary-text;
     margin: 0 0 1rem 0;
-    font-size: 1.5rem;
   }
   
   p {
     @include paragraph-light-text;
     margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
+
   }
   
+}
+
+@include gt-sm{
+  .card {
+    padding: 3rem;
+  }
 }

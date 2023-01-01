@@ -1,9 +1,11 @@
 $border-radius: 10px;
 $border-radiusx2: 20px;
-
 $border-weight: 2px solid;
 
 $tiny-gap: 0.2rem;
+
+$small-padding: 20px;
+$large-padding: 65px;
 
 @keyframes float {
     0% {
@@ -21,6 +23,13 @@ $tiny-gap: 0.2rem;
 
 @mixin float-animation ($time) {
     animation: float $time ease-in-out infinite;
+}
+
+@mixin hover-scale{
+    transition: 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.02);
+    }
 }
 
 @mixin glassmorphism {

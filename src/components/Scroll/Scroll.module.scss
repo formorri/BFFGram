@@ -7,7 +7,7 @@
     position: relative;
     
     .scroll{
-        $size: 8rem;
+        $size: 6.5rem;
         @include paragraph-medium-text;
         @include shadow;
         display: flex;
@@ -26,12 +26,28 @@
             margin: 0;
         }
         svg{
-            $size: 2rem;
+            $size: 1.5rem;
             width: $size;
             height: $size;
         }
         
 
 
+    }
+}
+
+@include gt-sm{
+    .container{
+        .scroll{
+            $size: 8rem;
+            width: $size;
+            height: $size;
+            padding: 1rem;
+            svg{
+                $size: 2rem;
+                width: $size;
+                height: $size;
+            }
+        }
     }
 }
