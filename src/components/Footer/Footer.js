@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className={styles.container}>
+    <footer id='contact' className={styles.container}>
       <div className={styles.absolute}>
         <Image
           src={images.circle1}

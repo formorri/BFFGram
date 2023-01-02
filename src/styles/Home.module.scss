@@ -15,10 +15,6 @@
 
 .title {
     @include header-text;
-
-    h1 {
-        margin: 2rem 0;
-    }
 }
 
 .description {
@@ -41,22 +37,8 @@
 }
 
 .hero {
-    margin-top: 6rem;
+    margin-top: $hero-top-margin-phone;
 }
-
-
-// @include lt-lg {
-//     .stats {
-//         margin: 3rem 20%;
-
-//     }
-// }
-
-// @include lt-md {
-//     .stats {
-//         margin: 3rem 0;
-//     }
-// }
 
 .stats {
     position: relative;
@@ -511,7 +493,7 @@
 
 @include gt-md {
     .hero {
-        margin-top: 8rem;
+        margin-top: $hero-top-margin-desktop;
     }
 
 

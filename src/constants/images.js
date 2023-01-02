@@ -18,16 +18,16 @@ import homePic1 from '../assets/images/home-pic-1.png';
 import homePic2 from '../assets/images/home-pic-2.png';
 import homePic3 from '../assets/images/home-pic-3.png';
 
-import aboutCardano from '../assets/images/about-cardano.png';
-import about1 from '../assets/images/about-pic-1.png';
-import about2 from '../assets/images/about-pic-2.png';
-import about3 from '../assets/images/about-pic-3.png';
-import aboutPie from '../assets/images/about-pie.png';
+import tokenCardano from '../assets/images/token-cardano.png';
+import token1 from '../assets/images/token-pic-1.png';
+import token2 from '../assets/images/token-pic-2.png';
+import token3 from '../assets/images/token-pic-3.png';
+import tokenPie from '../assets/images/token-pie.png';
 
-import tokenApple from '../assets/images/token-apple-logo.png';
-import tokenFounder from '../assets/images/token-founder.png';
-import tokenMission from '../assets/images/token-apple-logo.png';
-import tokenPlay from '../assets/images/token-play-logo.png';
+import aboutApple from '../assets/images/about-apple-logo.png';
+import aboutFounder from '../assets/images/about-founder.png';
+import aboutMission from '../assets/images/about-mission.png';
+import aboutPlay from '../assets/images/about-play-logo.png';
 
 
 export default {
@@ -48,13 +48,13 @@ export default {
     homePic1,
     homePic2,
     homePic3,
-    aboutCardano,
-    about1,
-    about2,
-    about3,
-    aboutPie,
-    tokenApple,
-    tokenFounder,
-    tokenMission,
-    tokenPlay
+    aboutApple,
+    aboutFounder,
+    aboutMission,
+    aboutPlay,
+    tokenCardano,
+    token1,
+    token2,
+    token3,
+    tokenPie,
 };

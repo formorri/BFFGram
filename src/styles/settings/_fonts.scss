@@ -1,7 +1,7 @@
 @use 'media-query' as *;
 
 $line-height-multiplier: 1.18;
-$line-height-multiplier-title: 1.8;
+$line-height-multiplier-title: 2.2;
 $font-size-multiplier: 0.2; //% increase or reduction depending on screen size
 $small-font: 1 - $font-size-multiplier;
 $normal-font: 1;
@@ -60,6 +60,7 @@ $large-font: 1 + $font-size-multiplier;
     font-size: calc($desktop-font-size * $small-font);
     line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier-title);
 
+
     @include gt-xs {
         font-size: $desktop-font-size;
         line-height: calc($desktop-font-size * $line-height-multiplier-title);
@@ -74,6 +75,9 @@ $large-font: 1 + $font-size-multiplier;
 @mixin font-settings($desktop-font-size) {
     font-size: calc($desktop-font-size * $small-font);
     line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier);
+    // h2{
+    //     margin: 0;
+    // }
 
     @include gt-xs {
         font-size: $desktop-font-size;

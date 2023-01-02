@@ -1,0 +1,255 @@
+@use 'settings/index.scss' as *;
+
+.circle-1 {
+    @include float-animation(4s)
+}
+
+.circle-2 {
+    @include float-animation(5s)
+}
+
+.circle-3 {
+    @include float-animation(6s)
+}
+
+
+.title {
+    @include header-text;
+}
+
+.description {
+    @include paragraph-medium-text;
+}
+
+.buttons {
+    @include light-button;
+}
+
+.buttons-dark {
+    @include dark-button;
+}
+
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: flex-start;
+}
+
+.hero{
+    margin-top: $hero-top-margin-phone;
+    .sub-header {
+        @include paragraph-medium-text;
+        text-transform: uppercase;
+        p{
+            margin: 0 0 -1rem 0;
+        }
+    }
+
+    &__grid{
+        margin-bottom: 3rem;
+
+        .circle-1{
+            width: 18rem;
+            height: auto;
+        }
+
+        .circle-3{
+            width: 14rem;
+            height: auto;
+        }
+
+        &--column1, &--column3{
+            position: relative;
+
+        }
+
+        &--column1{
+            margin-bottom: -3rem;
+        }
+        
+        &--column3{
+            img{
+                position: absolute;
+                right: 0;
+                bottom: -10rem;
+            }
+        }
+    
+        &--column2{
+            justify-content: flex-end;
+        }
+    }
+}
+
+.section1{
+    &__grid{
+        row-gap: 6rem;
+    }
+    &__cards{
+        border-radius: $border-radiusx2;
+        text-align: center;
+
+        &--images{
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            margin-top: -8rem;
+            .apple, .mission{
+                @include float-animation(4s);
+            }
+            .play{
+                @include float-animation(6s);
+            }
+
+            img{
+                width: 10rem;
+                height: auto;
+            }
+        }
+    }
+}
+
+.section2{
+    &__row1{
+        margin-bottom: 1rem;
+    }
+
+    .founder{
+        @include shadow;
+        border-radius: $border-radiusx2;
+        width: 100%;
+        height: auto;
+    }
+
+    &__row3{
+        display: flex;
+        column-gap: 1rem;
+        
+        &--text{
+            @include header-text;
+        }
+
+        .quotes{
+            margin: 2rem 0;
+        }
+    }
+
+    &__row4{
+        h2, p{
+            margin: 0;
+
+        }
+    }
+}
+
+@include gt-md{
+    .hero{
+        margin-top: $hero-top-margin-desktop;
+        .sub-header {
+            @include paragraph-medium-text;
+            text-transform: uppercase;
+            p{
+                margin: 0 0 -1rem 0;
+            }
+        }
+    
+        &__grid{
+            margin-bottom: 3rem;
+    
+            .circle-1{
+                width: 18rem;
+                height: auto;
+            }
+    
+            .circle-3{
+                width: 14rem;
+                height: auto;
+            }
+    
+            &--column1, &--column3{
+                position: relative;
+                img{
+                    position: absolute;
+                }
+            }
+    
+            &--column1{
+                img{
+                    left: 0;
+                    top: -5rem;
+                }
+            }
+    
+            &--column3{
+                img{
+                    right: 0;
+                    bottom: -5rem;
+                }
+            }
+        
+            &--column2{
+                justify-content: flex-end;
+            }
+        }
+    }
+    
+    .section1{
+        &__cards{
+            border-radius: $border-radiusx2;
+            text-align: center;
+    
+            &--images{
+                display: flex;
+                column-gap: 2rem;
+                align-items: center;
+                justify-content: center;
+                margin-top: -8rem;
+                .apple, .mission{
+                    @include float-animation(4s);
+                }
+                .play{
+                    @include float-animation(6s);
+                }
+    
+                img{
+                    width: 10rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+    
+    .section2{
+        &__row1{
+            margin-bottom: 1rem;
+        }
+    
+        .founder{
+            @include shadow;
+            border-radius: $border-radiusx2;
+        }
+    
+        &__row3{
+            display: flex;
+            column-gap: 1rem;
+            
+            &--text{
+                @include header-text;
+            }
+    
+            .quotes{
+                margin: 2rem 0;
+            }
+        }
+    
+        &__row4{
+            h2, p{
+                margin: 0;
+    
+            }
+        }
+    }
+}

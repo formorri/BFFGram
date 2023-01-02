@@ -4,7 +4,6 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 2rem;
   z-index: 1;
-  // min-height: 100vh;
   & > div{
     display: flex;
     flex-direction: column;
@@ -13,5 +12,6 @@
 
   @include lt-lg{
     grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 }

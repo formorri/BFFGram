@@ -37,23 +37,34 @@ const Navbar = () => {
                             <MenuIcon />
                         </Button>
                         <Menu {...bindMenu(popupState)} className={styles['phone-menu']}>
-                            {['about us', 'tokenomics'].map((item) => (
-                                <MenuItem onClick={popupState.close} key={`link-${item}`}>
-                                    <Link href={`#${item}`}>{item}</Link>
+                                <MenuItem onClick={popupState.close}>
+                                    <Link href='/'>Home</Link>
                                 </MenuItem>
-                            ))}
+                                <MenuItem onClick={popupState.close}>
+                                    <Link href='/about'>About Us</Link>
+                                </MenuItem>
+                                <MenuItem onClick={popupState.close}>
+                                    <Link href='/about'>Tokenomics</Link>
+                                </MenuItem>
+                                <MenuItem onClick={popupState.close}>
+                                    <Link href='#contact'>Contact Us</Link>
+                                </MenuItem>
                         </Menu>
                     </React.Fragment>
                 )}
             </PopupState>
             <ul className={styles.container__links} sx={{ display: { md: 'flex', xs: 'none' } }}>
-                {['about us', 'tokenomics'].map((item) => (
-                    <li className={styles.links} key={`link-${item}`}>
-                        <Link href={`/${item}`}>{item}</Link>
-                    </li>
-                ))}
+                <li className={styles.links}>
+                    <Link href='/'>Home</Link>
+                </li>
+                <li className={styles.links}>
+                    <Link href='/about'>About Us</Link>
+                </li>
+                <li className={styles.links}>
+                    <Link href='/tokenomics'>Tokenomics</Link>
+                </li>
                 <li className={styles.contact}>
-                    <a id='contact' href='#contact'>Contact Us</a>
+                    <a href='#contact'>Contact Us</a>
                 </li>
             </ul>
 

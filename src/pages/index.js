@@ -9,11 +9,11 @@ import Grid12 from '../components/Grid-1-2';
 import Navbar from '../components/Navbar';
 import Scroll from '../components/Scroll';
 import Main from '../components/Main';
-import Footer from '../components/Footer';
 import Grid from '../components/Grid';
 import Card from '../components/Card';
 import Carousel from '../components/Carousel';
 import Action from '../components/Action';
+import Footer from '../components/Footer';
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -41,10 +41,6 @@ export default function Home() {
         ></meta>
       </Head>
 
-      <Background />
-
-      <Navbar />
-
       <Section className={styles.hero}>
         <Grid12>
           <div>
@@ -56,7 +52,7 @@ export default function Home() {
             </div>
             <div className={styles['buttons-container']}>
               <div className={styles.buttons}>
-                <Link href="/">Collaborate with us <ArrowOutwardIcon /> </Link>
+                <Link href="#contact">Collaborate with us <ArrowOutwardIcon /> </Link>
               </div>
               <div className={styles['buttons-dark']}>
                 <Link href="/">Play video <PlayArrowIcon />  </Link>
