@@ -69,7 +69,10 @@ export default function Home() {
                 loading="lazy"
               />
               <div className={styles['stats__1']}>
-                <CountUp start={0} end={200} delay={0}>
+                <CountUp start={0} end={200} delay={0}
+                  enableScrollSpy={true}
+                  scrollSpyDelay={1}
+                >
                   {({ countUpRef }) => (
                     <div>
                       <h2><span ref={countUpRef} />+</h2>
@@ -92,7 +95,10 @@ export default function Home() {
                 className={styles['circle-3']}
                 loading="lazy"
               />
-              <CountUp start={0} end={600} delay={0}>
+              <CountUp start={0} end={600} delay={0}
+                enableScrollSpy={true}
+                scrollSpyDelay={1}
+              >
                 {({ countUpRef }) => (
                   <div>
                     <h2><span ref={countUpRef} />+</h2>

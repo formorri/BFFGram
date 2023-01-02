@@ -46,8 +46,13 @@
     @include gt-sm {
         display: none;
     }
+
+    &:hover{
+        background-color: $white-primary;
+    }
 }
 .phone-menu {
+    display: block;
     ul {
         li {
             padding-bottom: 1rem;

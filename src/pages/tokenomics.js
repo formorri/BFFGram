@@ -162,7 +162,37 @@ export default function Home() {
                                         className={styles['cardano']}
                                         loading="lazy"
                                     />
-                                    <CountUp start={0} end={10} delay={0}>
+                                    <CountUp
+                                        start={0}
+                                        end={10}
+                                        delay={0}
+                                        duration={0.5}
+                                        enableScrollSpy={true}
+                                        scrollSpyDelay={1}
+                                    >
+                                        {({ countUpRef }) => (
+                                            <h2><span ref={countUpRef} />%</h2>
+                                        )}
+                                    </CountUp>
+                                </div>
+                                <h2>Available for purchase after</h2>
+                            </div>
+                            <div>
+                                <div className={styles.absolute}>
+                                    <Image
+                                        src={images.tokenPie}
+                                        alt="cardano"
+                                        className={styles['cardano']}
+                                        loading="lazy"
+                                    />
+                                    <CountUp
+                                        start={0}
+                                        end={10}
+                                        delay={0}
+                                        duration={0.5}
+                                        enableScrollSpy={true}
+                                        scrollSpyDelay={1}
+                                    >
                                         {({ countUpRef }) => (
                                             <h2><span ref={countUpRef} />%</h2>
                                         )}
@@ -170,9 +200,79 @@ export default function Home() {
                                 </div>
                                 <h2>Available for Pre-Sale</h2>
                             </div>
-
                         </div>
                     </div>
+                </Grid12>
+            </Section>
+
+            <Section className={styles.section3}>
+                <div className={styles.title}>
+                    <h1>How does it work?</h1>
+                </div>
+                <div className={styles['section3__flex']}>
+                    <Card className={styles.card}>
+                        <div className={styles.number}>
+                            1
+                        </div>
+                        <div className={styles.info}>
+                            <h1>Lorem ipsum dolor sit amet. Hic voluptate velit</h1>
+                        </div>
+                    </Card>
+                    <Card className={styles.card}>
+                        <div className={styles.number}>
+                            2
+                        </div>
+                        <div className={styles.info}>
+                            <h1>Lorem ipsum dolor sit amet. Hic voluptate velit </h1>
+                        </div>
+                    </Card>
+                    <Card className={styles.card}>
+                        <div className={styles.number}>
+                            3
+                        </div>
+                        <div className={styles.info}>
+                            <h1>Lorem ipsum dolor sit amet. Hic voluptate velit </h1>
+                        </div>
+                    </Card>
+                </div>
+            </Section>
+
+            <Section className={styles.section4}>
+                <Grid12>
+                    <Image
+                        src={images.token2}
+                        alt="creative-person"
+                        className={styles['section4__image']}
+                        loading="lazy"
+                    />
+                    <div className={styles['section4__info']}>
+                        <div className={styles.title}>
+                            <h1>Platforming The Creative Community</h1>
+                        </div>
+                        <ul>
+                            <li>Celebrities, artistes and the like can have their own limited edition NFTs for users</li>
+                            <li>More common NFTs at a lower price available as well</li>
+                            <li>Collaboration with PISK for rare editions during special events</li>
+                            <li>Possibility of trading or gifting for collectors</li>
+                        </ul>
+                    </div>
+                </Grid12>
+                <Grid12 className={styles.reorder}>
+                    <div className={styles['section4__info']}>
+                        <div className={styles.title}>
+                            <h1>Empowering Knowledge Based Experts</h1>
+                        </div>
+                        <ul>
+                            <li>NFTs from them to mark course completion/advice sought/progression or recommendations/etc</li>
+                            <li>Able to be traded for discounts on courses or so</li>
+                        </ul>
+                    </div>
+                    <Image
+                        src={images.token3}
+                        alt="knowledge-expert-person"
+                        className={styles['section4__image']}
+                        loading="lazy"
+                    />
                 </Grid12>
             </Section>
 

@@ -23,6 +23,7 @@ const Navbar = () => {
                     loading="lazy"
                 />
             </div>
+            
             <PopupState
                 variant="popover"
                 popupId="demo-popup-menu"
@@ -37,18 +38,18 @@ const Navbar = () => {
                             <MenuIcon />
                         </Button>
                         <Menu {...bindMenu(popupState)} className={styles['phone-menu']}>
-                                <MenuItem onClick={popupState.close}>
-                                    <Link href='/'>Home</Link>
-                                </MenuItem>
-                                <MenuItem onClick={popupState.close}>
-                                    <Link href='/about'>About Us</Link>
-                                </MenuItem>
-                                <MenuItem onClick={popupState.close}>
-                                    <Link href='/about'>Tokenomics</Link>
-                                </MenuItem>
-                                <MenuItem onClick={popupState.close}>
-                                    <Link href='#contact'>Contact Us</Link>
-                                </MenuItem>
+                            <MenuItem onClick={popupState.close}>
+                                <Link href='/'>Home</Link>
+                            </MenuItem>
+                            <MenuItem onClick={popupState.close}>
+                                <Link href='/about'>About Us</Link>
+                            </MenuItem>
+                            <MenuItem onClick={popupState.close}>
+                                <Link href='/about'>Tokenomics</Link>
+                            </MenuItem>
+                            <MenuItem onClick={popupState.close}>
+                                <Link href='#contact'>Contact Us</Link>
+                            </MenuItem>
                         </Menu>
                     </React.Fragment>
                 )}
