@@ -380,6 +380,92 @@
     }
 }
 
+.section7 {
+    .card {
+        @include shadow;
+        padding: 2rem;
+        $transition: 0.3s ease-in-out;
+
+        .preview {
+            &__container {
+                position: relative;
+                display: flex;
+
+                &--arrow {
+                    opacity: 0;
+                    z-index: 5;
+                    @include shadow;
+                    @include glassmorphism;
+                    position: absolute;
+                    top: 50%;
+                    right: 50%;
+                    transform: translate(50%, -50%);
+                    padding: 1rem;
+                    border-radius: 100%;
+                    border: $border-weight $white-primary;
+                    transition: $transition;
+
+                    svg {
+                        color: $white-primary;
+                        width: 2rem;
+                        height: auto;
+                    }
+                }
+
+            }
+
+            &__image {
+                filter: brightness(100%);
+                transition: $transition;
+
+                .news {
+                    @include shadow;
+                    width: 100%;
+                    height: auto;
+                    border-radius: $border-radius;
+                    transition: $transition;
+                }
+            }
+
+
+        }
+
+        &:hover {
+            .preview {
+                &__container {
+                    &--arrow {
+                        opacity: 1;
+                    }
+
+                }
+
+                &__image {
+                    filter: brightness(70%);
+
+                    .news {
+                        @include shadow;
+                        border-radius: $border-radiusx2;
+                    }
+                }
+            }
+        }
+
+
+
+        .info {
+            margin-top: 1rem;
+
+            p {
+                @include paragraph-light-secondary-text;
+            }
+
+            h2 {
+                @include paragraph-medium-text;
+            }
+        }
+    }
+}
+
 @include md {
     .stats {
         margin: 0 15% 3rem;
@@ -450,7 +536,7 @@
             }
         }
     }
-    
+
     .section2 {
         &__container {
             .circle-1 {
@@ -713,6 +799,12 @@
                     }
                 }
             }
+        }
+    }
+
+    .section7 {
+        .card {
+            padding: 1rem;
         }
     }
 }

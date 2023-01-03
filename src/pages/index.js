@@ -21,12 +21,14 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 
 import styles from '../styles/Home.module.scss'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import CountUp from 'react-countup';
 
 import { images } from '../constants';
+import News from '../Props/News.js';
 
 export default function Home() {
   return (
@@ -439,13 +441,46 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section>
-        <Carousel>
-          <Card>text1</Card>
-          <Card>text2</Card>
+      <Section className={styles.section7}>
+        <div className={styles.title}>
+          <h1>Stay up to date</h1>
+        </div>
+        <Carousel className={styles['section7__carousel']}>
+          {News.map((item) => {
+            return (
+              <Card className={styles['card']}>
+                <div className={styles.preview}>
+                  <Link href={item.url}>
+                    <div className={styles['preview__container']}>
+                      <div className={styles['preview__container--arrow']}>
+                        <ArrowForwardIcon />
+                      </div>
+                      <div className={styles['preview__image']}>
+                        <Image
+                          src={item.image}
+                          alt={`news-${item.id}`}
+                          className={styles.news}
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                <div className={styles.info}>
+                  <p>{item.date}</p>
+                  <h2>{item.item}</h2>
+                </div>
+              </Card>
+            );
+          })}
+
+          {/* <Card>text2</Card>
           <Card>text3</Card>
           <Card>text4</Card>
           <Card>text5</Card>
+          <Card>text6</Card>
+          <Card>text7</Card>
+          <Card>text8</Card> */}
         </Carousel>
 
       </Section>

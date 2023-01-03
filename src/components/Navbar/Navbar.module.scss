@@ -36,7 +36,7 @@
 .burger {
     @include glassmorphism;
     display: flex;
-    padding: rem;
+    padding: 0rem;
     border-radius: $border-radius;
     border: $border-weight $dark-primary;
     color: $dark-primary;
@@ -53,18 +53,16 @@
 }
 .phone-menu {
     display: block;
+    z-index: 1000;
     ul {
         li {
             padding-bottom: 1rem;
-
             a {
                 @include navbar-text;
                 @include hover-scale;
                 color: $dark-primary;
                 text-transform: capitalize;
-
             }
-
         }
     }
 }
