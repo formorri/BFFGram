@@ -27,7 +27,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import CountUp from 'react-countup';
 
-import { images } from '../constants';
+import { images } from './../constants';
 import News from '../Props/News.js';
 
 export default function Home() {
@@ -42,7 +42,8 @@ export default function Home() {
           content="Use Sass to start your Next.js app with CSS superpowers!"
         ></meta>
       </Head>
-
+      <Background/>
+      <Navbar />
       <Section className={styles.hero}>
         <Grid12>
           <div>
@@ -448,7 +449,7 @@ export default function Home() {
         <Carousel className={styles['section7__carousel']}>
           {News.map((item) => {
             return (
-              <Card className={styles['card']}>
+              <Card className={styles['card']} key={item.id}>
                 <div className={styles.preview}>
                   <Link href={item.url}>
                     <div className={styles['preview__container']}>

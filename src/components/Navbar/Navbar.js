@@ -3,6 +3,7 @@ import styles from './Navbar.module.scss';
 import { images } from '../../constants';
 import Image from 'next/image'
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -45,7 +46,7 @@ const Navbar = () => {
                                 <Link href='/about'>About Us</Link>
                             </MenuItem>
                             <MenuItem onClick={popupState.close}>
-                                <Link href='/about'>Tokenomics</Link>
+                                <Link href='/tokenomics'>Tokenomics</Link>
                             </MenuItem>
                             <MenuItem onClick={popupState.close}>
                                 <Link href='#contact'>Contact Us</Link>

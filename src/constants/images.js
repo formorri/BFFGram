@@ -1,3 +1,5 @@
+
+
 import logoBlack from '../assets/images/logo-black.svg';
 import logoColoured from '../assets/images/logo-coloured.svg';
 
@@ -29,8 +31,7 @@ import aboutFounder from '../assets/images/about-founder.png';
 import aboutMission from '../assets/images/about-mission.png';
 import aboutPlay from '../assets/images/about-play-logo.png';
 
-
-export default {
+const Images ={
     logoBlack,
     logoColoured,
     logo,
@@ -57,4 +58,7 @@ export default {
     token2,
     token3,
     tokenPie,
-};
+}
+
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
+export default Images

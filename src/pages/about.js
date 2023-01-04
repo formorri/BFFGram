@@ -27,7 +27,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import CountUp from 'react-countup';
 
-import { images } from '../constants';
+import { images } from './../constants';
 
 export default function Home() {
     return (
@@ -41,6 +41,9 @@ export default function Home() {
                     content="Use Sass to start your Next.js app with CSS superpowers!"
                 ></meta>
             </Head>
+
+            <Background />
+            <Navbar />
 
             <Section className={styles.hero}>
                 <Grid13 className={styles['hero__grid']}>
