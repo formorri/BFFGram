@@ -46,6 +46,15 @@
     border: $border-weight $white-primary;
     border-radius: $border-radiusx2;
 
+    .error {
+      @include paragraph-light-secondary-text;
+      color: red;
+    }
+    .success {
+      @include paragraph-light-secondary-text;
+      color: green;
+    }
+
     &__header {
       h2 {
         margin: 0;
@@ -95,7 +104,7 @@
 
       svg {
         height: inherit;
-        margin-right: 0.5rem ;
+        margin-right: 0.5rem;
       }
 
       &:hover {
@@ -103,6 +112,7 @@
 
       }
     }
+
     // .input {
     //   @include paragraph-medium-text;
     //   background-color: rgba(254, 254, 254, 0.25);
@@ -119,7 +129,7 @@
 
   }
 
-  .info{
+  .info {
     display: flex;
     flex-wrap: nowrap;
 
@@ -140,15 +150,15 @@
       height: $size;
       padding: 1rem;
       text-align: center;
-  
-      a{
+
+      a {
         color: $white-primary;
       }
-  
+
       p {
         margin: 0;
       }
-  
+
       svg {
         $size: 1.5rem;
         width: $size;
@@ -160,18 +170,19 @@
 
 }
 
-@include gt-sm{
-  .back-to-top{
-      .scroll{
-          $size: 8rem;
-          width: $size;
-          height: $size;
-          padding: 1rem;
-          svg{
-              $size: 2rem;
-              width: $size;
-              height: $size;
-          }
+@include gt-sm {
+  .back-to-top {
+    .scroll {
+      $size: 8rem;
+      width: $size;
+      height: $size;
+      padding: 1rem;
+
+      svg {
+        $size: 2rem;
+        width: $size;
+        height: $size;
       }
+    }
   }
 }

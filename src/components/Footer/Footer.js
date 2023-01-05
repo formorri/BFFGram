@@ -7,21 +7,16 @@ import { Button } from '@mui/material';
 
 import FormControl, { useFormControl } from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import Box from '@mui/material/Box';
 import FormHelperText from '@mui/material/FormHelperText';
-import { alpha, styled } from '@mui/material/styles';
-// import InputBase from '@mui/material/InputBase';
-// import Box from '@mui/material/Box';
-// import InputLabel from '@mui/material/InputLabel';
-// import TextField from '@mui/material/TextField';
-// import FormControl from '@mui/material/FormControl';
-// import Input from '@mui/material/Input';
+import { styled } from '@mui/material/styles';
+import { Alert, AlertTitle } from '@mui/material/Alert';
 
 import { images } from '../../constants';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Card from '../../components/Card';
 import Link from 'next/link';
+import { sendContactForm } from '../../../lib/api';
 
 
 const Input = styled(OutlinedInput)({
@@ -42,7 +37,7 @@ const Input = styled(OutlinedInput)({
 
 const StyledFormHelperText = styled(FormHelperText)({
   color: 'white',
-  marginLeft:'0',
+  marginLeft: '0',
 });
 
 function MyFormHelperText() {
@@ -69,8 +64,12 @@ const initState = { values: initValues };
 
 
 const Footer = () => {
-  const [state, setState] = useState(initState);
-  const { values, isLoading } = state;
+  const [state, setState] = useState({
+    values: initState,
+    error: null,
+    submitted: false,
+  });
+  const { values, error, submitted } = state;
   const handleChange = ({ target }) => setState((prev) => ({
     ...prev,
     values: {
@@ -81,9 +80,20 @@ const Footer = () => {
   const onSubmit = async () => {
     setState((prev) => ({
       ...prev,
-      isLoading: true,
-    }))
-  }
+    }));
+    try {
+      await sendContactForm(values);
+      setState(() => ({
+        values: initState,
+        submitted: true,
+      }));
+    } catch (err) {
+      setState((prev) => ({
+        ...prev,
+        error: err.message,
+      }));
+    }
+  };
 
   return (
     <footer id='contact' className={styles.container}>
@@ -118,6 +128,13 @@ const Footer = () => {
               loading="lazy"
             />
           </div>
+          {/* {error && (
+            <p className={styles.error}>{error}</p>
+          )} */}
+          {error && <p className={styles.error}>{error}</p>}
+          {submitted && (
+            <p className={styles.success}>Thanks for contacting us!</p>
+          )}
           <form className={styles.field} >
             <FormControl
             >
@@ -129,7 +146,7 @@ const Footer = () => {
                 placeholder="Enter your name"
                 required
               />
-              <MyFormHelperText/>
+              <MyFormHelperText />
             </FormControl>
             <FormControl>
               <Input
@@ -140,7 +157,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 required
               />
-            <MyFormHelperText/>
+              <MyFormHelperText />
             </FormControl>
             <FormControl>
               <Input
@@ -158,7 +175,6 @@ const Footer = () => {
               disabled={
                 !values.name || !values.email
               }
-              isLoading={isLoading}
               onClick={onSubmit}
             >
               <ArrowOutwardIcon />
