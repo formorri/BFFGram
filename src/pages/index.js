@@ -8,8 +8,6 @@ import Section from '../components/Section';
 import Grid12 from '../components/Grid-1-2';
 import Navbar from '../components/Navbar';
 import Scroll from '../components/Scroll';
-import Main from '../components/Main';
-import Grid from '../components/Grid';
 import Card from '../components/Card';
 import Carousel from '../components/Carousel';
 import Action from '../components/Action';
@@ -37,11 +35,6 @@ export default function Home() {
         <title>BFFGram Website</title>
         <link rel="icon" href="/favicon.ico" />
 
-        {/* <meta
-          name="description"
-          content="Use Sass to start your Next.js app with CSS superpowers!"
-        ></meta> */}
-
         <meta property="og:type" content="website" />
         <meta property="og:title" content="BFFGram Website" />
         <meta property="og:site_name" content="BFFGram Website" />
@@ -54,7 +47,7 @@ export default function Home() {
       </Head>
       <Background />
       <Navbar />
-      <Section className={styles.hero}>
+      <Section className={styles.hero} id="home">
         <Grid12>
           <div>
             <div className={styles.title}>

@@ -9,21 +9,12 @@ import Grid12 from '../components/Grid-1-2';
 import Grid13 from '../components/Grid-1-3';
 import Navbar from '../components/Navbar';
 import Scroll from '../components/Scroll';
-import Main from '../components/Main';
-import Grid from '../components/Grid';
 import Card from '../components/Card';
-import Carousel from '../components/Carousel';
 import Action from '../components/Action';
 import Footer from '../components/Footer';
 
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-
 import styles from '../styles/Tokenomics.module.scss'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import CountUp from 'react-countup';
 
@@ -38,7 +29,7 @@ export default function Home() {
             <Background />
             <Navbar />
 
-            <Section className={styles.hero}>
+            <Section className={styles.hero} id="home">
                 <Grid13 className={styles['hero__grid']}>
                     <div className={styles['hero__grid--column1']}>
                         <Image
