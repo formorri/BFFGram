@@ -34,15 +34,25 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>Create Next App</title>
+        <title>BFFGram Website</title>
         <link rel="icon" href="/favicon.ico" />
 
-        <meta
+        {/* <meta
           name="description"
           content="Use Sass to start your Next.js app with CSS superpowers!"
-        ></meta>
+        ></meta> */}
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="BFFGram Website" />
+        <meta property="og:site_name" content="BFFGram Website" />
+        <meta property="og:description" content="All In One Application" />
+        <meta property="og:image" content={images.logo} />
+        <meta name="keywords"
+          content="BFFGram, social media application, cardano blockchain, social networking platform" />
+        <meta name="author" content="Lam Zi Xin" />
+
       </Head>
-      <Background/>
+      <Background />
       <Navbar />
       <Section className={styles.hero}>
         <Grid12>

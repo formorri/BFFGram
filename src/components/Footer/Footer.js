@@ -14,6 +14,12 @@ import { Alert, AlertTitle } from '@mui/material/Alert';
 import { images } from '../../constants';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+
 import Card from '../../components/Card';
 import Link from 'next/link';
 import { sendContactForm } from '../../../lib/api';
@@ -117,7 +123,7 @@ const Footer = () => {
           loading="lazy"
         />
       </div>
-      <Grid12>
+      <div className={styles.grid}>
         <div className={styles.form}>
           <div className={styles['form__header']}>
             <h2>Get in touch</h2>
@@ -128,9 +134,7 @@ const Footer = () => {
               loading="lazy"
             />
           </div>
-          {/* {error && (
-            <p className={styles.error}>{error}</p>
-          )} */}
+
           {error && <p className={styles.error}>{error}</p>}
           {submitted && (
             <p className={styles.success}>Thanks for contacting us!</p>
@@ -182,24 +186,118 @@ const Footer = () => {
             </Button>
           </form>
         </div>
-        <div className={styles.info}>
-          <div>
-            <Grid12>
-              <Card></Card>
-              <Card></Card>
-            </Grid12>
-            <Card></Card>
-          </div>
-          <div className={styles['back-to-top']}>
-            <Link href='#home'>
-              <div className={styles.scroll}>
-                <ArrowUpwardIcon />
-                <p>Go back to top</p>
-              </div>
-            </Link>
+        <div className={styles.flex}>
+          <div className={styles.info}>
+            <div className={styles.info__info}>
+              <Grid12>
+                <Card className={styles.text}>
+                  <div>
+                    <h2>Sitemap</h2>
+                  </div>
+                  <ul>
+                    <li>
+                      <Link href='/'>
+                        Home
+                        <Image
+                          src={images.star}
+                          alt="star"
+                          className={styles['star']}
+                          loading="lazy"
+                        />
+                      </Link>
+                    </li>
+                    <li>
+
+                      <Link href='/about'>
+                        About
+                        <Image
+                          src={images.star}
+                          alt="star"
+                          className={styles['star']}
+                          loading="lazy"
+                        />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href='/tokenomics'>
+                        Tokenomics
+                        <Image
+                          src={images.star}
+                          alt="star"
+                          className={styles['star']}
+                          loading="lazy"
+                        />
+                      </Link>
+                    </li>
+                  </ul>
+                </Card>
+                <Card className={styles.text}>
+                  <div>
+                    <h2>Address</h2>
+                  </div>
+                  <ul>
+                    <li>
+                      Consequat aliqua veniam officia,
+                    </li>
+                    <li>
+                      Occaecat laboris ad adipisicing.
+                    </li>
+                    <li>
+                      Occaecat laboris ad adipisicing.
+                    </li>
+                    <li>
+                      Occaecat laboris ad adipisicing.
+                    </li>
+                  </ul>
+                </Card>
+              </Grid12>
+              <Card className={`${styles["text"]} ${styles["contacts"]}`}>
+                <div>
+                  <h2>Telephone</h2>
+                  <p>012-8346587348</p>
+                  <p>012-8346587348</p>
+                </div>
+
+                <ul>
+                  <li>
+                    <Link href='/'>
+                      <InstagramIcon></InstagramIcon>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/'>
+                      <FacebookIcon></FacebookIcon>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/'>
+                      <LinkedInIcon></LinkedInIcon>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/'>
+                      <TwitterIcon></TwitterIcon>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/'>
+                      <YouTubeIcon></YouTubeIcon>
+                    </Link>
+                  </li>
+                </ul>
+              </Card>
+            </div>
+            <div className={styles['back-to-top']}>
+              <Link href='#home'>
+                <div className={styles.scroll}>
+                  <ArrowUpwardIcon />
+                  <p>Go back to top</p>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
-      </Grid12>
+      </div>
     </footer>
   )
 }

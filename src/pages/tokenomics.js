@@ -33,13 +33,6 @@ export default function Home() {
     return (
         <Container>
             <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
-
-                <meta
-                    name="description"
-                    content="Use Sass to start your Next.js app with CSS superpowers!"
-                ></meta>
             </Head>
 
             <Background />
