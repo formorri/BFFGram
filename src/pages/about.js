@@ -16,8 +16,6 @@ import Footer from '../components/Footer';
 import styles from '../styles/About.module.scss'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
-import CountUp from 'react-countup';
-
 import { images } from './../constants';
 
 export default function Home() {

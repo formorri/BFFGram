@@ -16,6 +16,8 @@ const Carousel = ({ children }) => {
   useEffect(() => {
     if (width <= 650) {
       setSlidesToShow(1);
+    } else if (width <= 960){
+      setSlidesToShow(2);
     } else {
       setSlidesToShow(3);
     }

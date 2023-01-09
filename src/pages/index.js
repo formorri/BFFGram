@@ -454,7 +454,7 @@ export default function Home() {
             return (
               <Card className={styles['card']} key={item.id}>
                 <div className={styles.preview}>
-                  <Link href={item.url}>
+                  <Link href={item.url} target='_blank'>
                     <div className={styles['preview__container']}>
                       <div className={styles['preview__container--arrow']}>
                         <ArrowForwardIcon />
@@ -477,17 +477,9 @@ export default function Home() {
               </Card>
             );
           })}
-
-          {/* <Card>text2</Card>
-          <Card>text3</Card>
-          <Card>text4</Card>
-          <Card>text5</Card>
-          <Card>text6</Card>
-          <Card>text7</Card>
-          <Card>text8</Card> */}
         </Carousel>
-
       </Section>
+
       <Section className={styles['call-to-action']}>
         <Action />
       </Section>

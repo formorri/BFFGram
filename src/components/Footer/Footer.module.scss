@@ -21,7 +21,7 @@
 
     .circle-1 {
       @include float-animation(6s);
-      width: 28rem;
+      width: 20rem;
       height: auto;
       top: 40rem;
       left: 0rem;
@@ -29,9 +29,9 @@
 
     .circle-2 {
       @include float-animation(8s);
-      width: 12rem;
+      width: 10rem;
       height: auto;
-      left: 18rem;
+      left: 10rem;
       top: -12rem;
     }
 
