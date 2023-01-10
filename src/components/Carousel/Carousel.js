@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useWindowSize } from 'react-use';
 import { motion, AnimatePresence } from 'framer-motion';
+import { StylesProvider } from '@material-ui/core/styles';
 import Button from '@mui/material/Button';
 import styles from './Carousel.module.scss';
 
@@ -16,7 +17,7 @@ const Carousel = ({ children }) => {
   useEffect(() => {
     if (width <= 650) {
       setSlidesToShow(1);
-    } else if (width <= 960){
+    } else if (width <= 960) {
       setSlidesToShow(2);
     } else {
       setSlidesToShow(3);
@@ -59,31 +60,33 @@ const Carousel = ({ children }) => {
   }
 
   return (
-    <div className={styles.carousel} ref={carouselRef}>
-    <div className={styles['arrow-container']}>
-      <Button className={styles.arrow} onClick={handlePrevClick}>
-        <NavigateBeforeIcon/>
-      </Button>
-      <Button className={styles.arrow} onClick={handleNextClick}>
-        <NavigateNextIcon/>
-      </Button>
-    </div>
-      <AnimatePresence>
-        <div>
-          <motion.div
-            key={currentIndex}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            custom={{ direction, width }}
-            className={styles.slider}
-          >
-            {children.slice(currentIndex, currentIndex + slidesToShow)}
-          </motion.div>
+    <StylesProvider injectFirst>
+      <div className={styles.carousel} ref={carouselRef}>
+        <div className={styles['arrow-container']}>
+          <Button className={styles.arrow} onClick={handlePrevClick}>
+            <NavigateBeforeIcon />
+          </Button>
+          <Button className={styles.arrow} onClick={handleNextClick}>
+            <NavigateNextIcon />
+          </Button>
         </div>
-      </AnimatePresence>
-    </div>
+        <AnimatePresence>
+          <div>
+            <motion.div
+              key={currentIndex}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              custom={{ direction, width }}
+              className={styles.slider}
+            >
+              {children.slice(currentIndex, currentIndex + slidesToShow)}
+            </motion.div>
+          </div>
+        </AnimatePresence>
+      </div>
+    </StylesProvider>
   );
 };
 
