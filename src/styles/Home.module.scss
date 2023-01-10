@@ -70,15 +70,15 @@
     &__container {
         align-self: flex-end;
         margin-top: 3.5rem;
-        margin-right: 5rem;
+        margin-right: 2.5rem;
         z-index: 1;
 
         .circle-1 {
             position: absolute;
-            width: 15rem;
+            width: 12rem;
             height: auto;
-            top: -2.5rem;
-            right: -1.5rem;
+            top: -1.5rem;
+            right: -1rem;
             z-index: -1;
         }
     }
@@ -219,16 +219,16 @@
 
         .circle-1 {
             bottom: -5rem;
-            right: -2.5rem;
+            right: -1rem;
             height: auto;
-            width: 20rem;
+            width: 14rem;
         }
 
         .circle-3 {
-            width: 10rem;
+            width: 8rem;
             height: auto;
             left: -1rem;
-            top: -3rem;
+            top: -2rem;
         }
 
         &--founder {
@@ -340,8 +340,8 @@
     align-items: center;
 
     &__image {
-        margin-right: -5rem;
-        width: 100%;
+        margin-right: -2rem;
+        width: 90%;
         height: auto;
     }
 }
@@ -358,7 +358,7 @@
 
         .star {
             width: auto;
-            height: 6rem;
+            height: 3rem;
         }
     }
 
@@ -383,8 +383,9 @@
 .section7 {
     .card {
         @include shadow;
-        padding: 2rem;
+        padding: 20px;
         $transition: 0.3s ease-in-out;
+        width: auto;
 
         .preview {
             &__container {
@@ -417,10 +418,10 @@
             &__image {
                 filter: brightness(100%);
                 transition: $transition;
-
+                
                 .news {
-                    @include shadow;
                     width: 100%;
+                    @include shadow;
                     height: auto;
                     border-radius: $border-radius;
                     transition: $transition;
@@ -454,7 +455,7 @@
 
         .info {
             margin-top: 1rem;
-            width: 20rem;
+            width: 18rem;
 
             p {
                 @include paragraph-light-secondary-text;

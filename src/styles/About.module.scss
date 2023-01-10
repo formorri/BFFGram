@@ -56,7 +56,7 @@
         }
 
         .circle-3{
-            width: 14rem;
+            width: 12rem;
             height: auto;
         }
 
@@ -97,7 +97,7 @@
             column-gap: 2rem;
             align-items: center;
             justify-content: center;
-            margin-top: -8rem;
+            margin-top: -6rem;
             .apple, .mission{
                 @include float-animation(4s);
             }
@@ -106,7 +106,7 @@
             }
 
             img{
-                width: 10rem;
+                width: 8rem;
                 height: auto;
             }
         }
@@ -135,6 +135,8 @@
 
         .quotes{
             margin: 2rem 0;
+            height: 3rem;
+            width: auto;
         }
     }
 
@@ -243,6 +245,7 @@
     
             .quotes{
                 margin: 2rem 0;
+                height: 5rem;
             }
         }
     

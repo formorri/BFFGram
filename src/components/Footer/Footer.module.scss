@@ -29,18 +29,18 @@
 
     .circle-2 {
       @include float-animation(8s);
-      width: 10rem;
+      width: 8rem;
       height: auto;
-      left: 10rem;
-      top: -12rem;
+      left: 13rem;
+      top: -8rem;
     }
 
     .circle-3 {
       @include float-animation(4s);
-      width: 8rem;
+      width: 5rem;
       height: auto;
       left: 0rem;
-      top: -6rem;
+      top: -4rem;
     }
   }
 
@@ -203,12 +203,12 @@
     .contacts {
       ul {
         display: flex;
-        column-gap: 0.5rem;
+        column-gap: 0.1rem;
 
         li {
           a {
             svg {
-              height: 2rem;
+              height: 1.5rem;
               width: auto;
             }
           }
