@@ -15,7 +15,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 const Navbar = () => {
     return (
         <nav className={styles.container}>
-
             <div className={styles.container__logo}>
                 <Image
                     src={images.logo}
@@ -24,7 +23,7 @@ const Navbar = () => {
                     loading="lazy"
                 />
             </div>
-            
+            <div className={styles["phone"]}>
             <PopupState
                 variant="popover"
                 popupId="demo-popup-menu"
@@ -34,11 +33,11 @@ const Navbar = () => {
                         <Button
                             variant="contained"
                             {...bindTrigger(popupState)}
-                            className={styles.burger}
+                            className={styles['phone__burger']}
                         >
                             <MenuIcon />
                         </Button>
-                        <Menu {...bindMenu(popupState)} className={styles['phone-menu']}>
+                        <Menu {...bindMenu(popupState)} className={styles['phone__menu']}>
                             <MenuItem onClick={popupState.close}>
                                 <Link href='/'>Home</Link>
                             </MenuItem>
@@ -55,6 +54,7 @@ const Navbar = () => {
                     </React.Fragment>
                 )}
             </PopupState>
+            </div>
             <ul className={styles.container__links} sx={{ display: { md: 'flex', xs: 'none' } }}>
                 <li className={styles.links}>
                     <Link href='/'>Home</Link>
