@@ -8,14 +8,15 @@
 .arrow-container{
   display: flex;
   justify-content: flex-end;
-}
-.arrow {
-  color: $dark-primary;
-  svg{
-    width: 2rem;
-    height: auto;
+  .arrow {
+    color: $dark-primary;
+    svg{
+      width: 2rem;
+      height: auto;
+    }
   }
 }
+
 
 .slider {
   display: flex;

@@ -9,7 +9,6 @@ import FormControl, { useFormControl } from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import FormHelperText from '@mui/material/FormHelperText';
 import { styled } from '@mui/material/styles';
-import { Alert, AlertTitle } from '@mui/material/Alert';
 
 import { images } from '../../constants';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
