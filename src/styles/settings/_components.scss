@@ -24,8 +24,102 @@ $hero-top-margin-desktop: 8rem;
     }
 }
 
+@keyframes action {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(5px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+// @keyframes idle {
+//     0% {
+//         transform: translate(0px ,0px);
+//     }
+
+//     25% {
+//         transform: translate(-15px ,-15px);
+//     }
+
+//     50% {
+//         transform: translate(0px ,-30px);
+//     }
+
+//     70% {
+//         transform: translate(15px ,-15px);
+//     }
+
+//     100% {
+//         transform: translate(0px ,0px);
+//     }
+// }
+
+@keyframes idle {
+    $translate: 3rem;
+    0% {
+        transform: translate(0px ,0px);
+    }
+
+    25% {
+        transform: translate( calc(-1 * ($translate / 2)), calc(-1 * ($translate / 2)));
+    }
+
+    50% {
+        transform: translate(0px ,calc(-1 * $translate));
+    }
+
+    75% {
+        transform: translate(calc(1 * ($translate / 2)), calc(-1 * ($translate / 2)));
+    }
+
+    100% {
+        transform: translate(0px ,0px);
+    }
+}
+
+@keyframes idle-reverse {
+    $translate: -10rem;
+    0% {
+        transform: translate(0px ,0px);
+    }
+
+    25% {
+        transform: translate( calc(-1 * ($translate / 2)), calc(-1 * ($translate / 2)));
+    }
+
+    50% {
+        transform: translate(0px ,calc(-1 * $translate));
+    }
+
+    75% {
+        transform: translate(calc(1 * ($translate / 2)), calc(-1 * ($translate / 2)));
+    }
+
+    100% {
+        transform: translate(0px ,0px);
+    }
+}
+
+@mixin action-animation ($time) {
+    animation: action $time ease-in-out infinite;
+}
+
 @mixin float-animation ($time) {
     animation: float $time ease-in-out infinite;
+}
+
+@mixin idle-animation ($time) {
+    animation: idle $time ease-in-out infinite;
+}
+
+@mixin idle-reverse-animation ($time) {
+    animation: idle-reverse $time ease-in-out infinite;
 }
 
 @mixin hover-scale{

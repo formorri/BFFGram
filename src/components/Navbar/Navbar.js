@@ -15,45 +15,45 @@ import MenuIcon from '@mui/icons-material/Menu';
 const Navbar = () => {
     return (
         <nav className={styles.container}>
-            <div className={styles.container__logo}>
+            <Link className={styles.container__logo} href='/'>
                 <Image
                     src={images.logo}
                     alt="bffgram-logo"
                     className={styles['logo']}
                     loading="lazy"
                 />
-            </div>
+            </Link>
             <div className={styles["phone"]}>
-            <PopupState
-                variant="popover"
-                popupId="demo-popup-menu"
-            >
-                {(popupState) => (
-                    <React.Fragment>
-                        <Button
-                            variant="contained"
-                            {...bindTrigger(popupState)}
-                            className={styles['phone__burger']}
-                        >
-                            <MenuIcon />
-                        </Button>
-                        <Menu {...bindMenu(popupState)} className={styles['phone__menu']}>
-                            <MenuItem onClick={popupState.close}>
-                                <Link href='/'>Home</Link>
-                            </MenuItem>
-                            <MenuItem onClick={popupState.close}>
-                                <Link href='/about'>About Us</Link>
-                            </MenuItem>
-                            <MenuItem onClick={popupState.close}>
-                                <Link href='/tokenomics'>Tokenomics</Link>
-                            </MenuItem>
-                            <MenuItem onClick={popupState.close}>
-                                <Link href='#contact'>Contact Us</Link>
-                            </MenuItem>
-                        </Menu>
-                    </React.Fragment>
-                )}
-            </PopupState>
+                <PopupState
+                    variant="popover"
+                    popupId="demo-popup-menu"
+                >
+                    {(popupState) => (
+                        <React.Fragment>
+                            <Button
+                                variant="contained"
+                                {...bindTrigger(popupState)}
+                                className={styles['phone__burger']}
+                            >
+                                <MenuIcon />
+                            </Button>
+                            <Menu {...bindMenu(popupState)} className={styles['phone__menu']}>
+                                <MenuItem onClick={popupState.close}>
+                                    <Link href='/'>Home</Link>
+                                </MenuItem>
+                                <MenuItem onClick={popupState.close}>
+                                    <Link href='/about'>About Us</Link>
+                                </MenuItem>
+                                <MenuItem onClick={popupState.close}>
+                                    <Link href='/tokenomics'>Tokenomics</Link>
+                                </MenuItem>
+                                <MenuItem onClick={popupState.close}>
+                                    <Link href='#contact'>Contact Us</Link>
+                                </MenuItem>
+                            </Menu>
+                        </React.Fragment>
+                    )}
+                </PopupState>
             </div>
             <ul className={styles.container__links} sx={{ display: { md: 'flex', xs: 'none' } }}>
                 <li className={styles.links}>

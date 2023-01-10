@@ -1,21 +1,5 @@
 @use '../../styles/settings/index.scss' as *;
-@keyframes action {
-    0% {
-        transform: translatey(0px);
-    }
 
-    50% {
-        transform: translatey(5px);
-    }
-
-    100% {
-        transform: translatey(0px);
-    }
-}
-
-@mixin action-animation ($time) {
-    animation: action $time ease-in-out infinite;
-}
 
 .container{
     width: 100%;

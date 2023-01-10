@@ -257,6 +257,7 @@
       }
 
       svg {
+        @include action-animation(1s);
         $size: 1.5rem;
         width: $size;
         height: $size;
@@ -271,7 +272,7 @@
       .circle-1 {
         width: 30rem;
         height: auto;
-        top: 50rem;
+        top: 45rem;
         left: 30rem;
       }
   
@@ -287,6 +288,24 @@
         height: auto;
         left: 0rem;
         top: -6rem;
+      }
+    }
+
+    .info {
+      &__info {
+        .text {
+          ul {
+            column-gap: 1rem;
+            li {
+              a {
+                svg {
+                  height: 4rem;
+                  width: auto;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -26,6 +26,7 @@ $circle-size: 60px;
 
     .circle-1 {
         // the purple circle
+        // @include idle-animation(10s);
         $ratio: 5.5;
         width: calc($circle-size * $ratio);
         height: calc($circle-size * $ratio);
@@ -43,9 +44,10 @@ $circle-size: 60px;
         top: 4rem;
         right: 4rem;
     }
-
+    
     .circle-3 {
         // the cyan circle
+        // @include idle-reverse-animation(10s);
         $ratio: 4;
         $size: 400px;
         width: calc($circle-size * $ratio);
