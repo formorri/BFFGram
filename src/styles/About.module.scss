@@ -27,6 +27,7 @@
 
 .buttons-dark {
     @include dark-button;
+    width: fit-content;
 }
 
 

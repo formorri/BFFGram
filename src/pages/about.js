@@ -15,6 +15,7 @@ import Footer from '../components/Footer';
 
 import styles from '../styles/About.module.scss'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 import { images } from './../constants';
 
@@ -116,6 +117,9 @@ export default function Home() {
                     </div>
                     <div className={styles.description}>
                         <p>Write up about Monah’s accomplishments, passion for the company….Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni.</p>
+                    </div>
+                    <div className={styles['buttons-dark']}>
+                        <Link href="/">Play video <PlayArrowIcon />  </Link>
                     </div>
                 </Grid12>
                 <Image

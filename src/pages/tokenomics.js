@@ -87,7 +87,7 @@ export default function Home() {
                         <Grid12>
                             <div className={styles.column1}>
                                 <Card className={styles['section1__cards']}>
-                                    <h2>Utility token issued by PISK used for payment of services of Subject Matter Experts</h2>
+                                    <h2>Utility token issued by BFFGram used for payment of services of Subject Matter Experts</h2>
                                 </Card>
                                 <Card className={styles['section1__cards']}>
                                     <h2>Used for savings and crowdfunding features</h2>
@@ -202,7 +202,7 @@ export default function Home() {
                             1
                         </div>
                         <div className={styles.info}>
-                            <h1>Lorem ipsum dolor sit amet. Hic voluptate velit</h1>
+                            <h1>Acquire BFFGram tokens through pre-sale or public sale.</h1>
                         </div>
                     </Card>
                     <Card className={styles.card}>
@@ -210,7 +210,7 @@ export default function Home() {
                             2
                         </div>
                         <div className={styles.info}>
-                            <h1>Lorem ipsum dolor sit amet. Hic voluptate velit </h1>
+                            <h1>Use tokens to pay for services from subject matter experts on the platform.</h1>
                         </div>
                     </Card>
                     <Card className={styles.card}>
@@ -218,7 +218,7 @@ export default function Home() {
                             3
                         </div>
                         <div className={styles.info}>
-                            <h1>Lorem ipsum dolor sit amet. Hic voluptate velit </h1>
+                            <h1>Tokens can be used to access savings and crowdfunding features, and to make purchases within the app</h1>
                         </div>
                     </Card>
                 </div>

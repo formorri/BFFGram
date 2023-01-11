@@ -51,7 +51,7 @@ export default function Home() {
         <Grid12>
           <div>
             <div className={styles.title}>
-              <h1>All In One Application</h1>
+              <h1>All In One App</h1>
             </div>
             <div className={styles.description}>
               <p>BFF Gram aims to be one of the most popular social networking platforms in the globe after launching in the UK. This multi-feature application will be known for its family/friends/advisors’ networking capabilities.</p>
@@ -140,11 +140,7 @@ export default function Home() {
                 </Card>
                 <Card>
                   <h2>Connect. Share. Play. Repeat</h2>
-                  <p>Lorem ipsum dolor sit amet. Hic
-                    voluptate velit qui inventore
-                    quas a mollitia suscipit hic
-                    ullam necessitatibus aut
-                    provident tempore</p>
+                  <p>Connect with friends and family, share your experiences, play games, and repeat the cycle on our social media platform.</p>
                 </Card>
               </div>
               <div className={styles.column2}>
@@ -154,11 +150,7 @@ export default function Home() {
                 </Card>
                 <Card>
                   <h2>Tokenomics as Digital Currency</h2>
-                  <p>Lorem ipsum dolor sit amet. Hic
-                    voluptate velit qui inventore
-                    quas a mollitia suscipit hic
-                    ullam necessitatibus aut
-                    provident tempore</p>
+                  <p>Experience the future of digital currency with our revolutionary tokenomics system, where every token holds real-world value and use.</p>
                 </Card>
               </div>
             </Grid12>
