@@ -19,12 +19,12 @@ module.exports = {
   },
 }
 
-module.exports = {
-  webpack: (config) => {
-    config.resolve.alias['constants'] = path.join(__dirname, 'src/constants');
-    return config;
-  },
-};
+// module.exports = {
+//   webpack: (config) => {
+//     config.resolve.alias['constants'] = path.join(__dirname, 'src/constants');
+//     return config;
+//   },
+// };
 
 // /** @type {import('next').NextConfig} */
 
