@@ -123,7 +123,7 @@ export default function Home() {
                         <br />
                         <div className={styles['buttons-container']}>
                             <div className={styles.buttons}>
-                                <Link href="#contact">Read More<ArrowOutwardIcon /> </Link>
+                                <Link href="/pdf/tokenomics.pdf" target='_blank'>Read More<ArrowOutwardIcon /> </Link>
                             </div>
                         </div>
 
@@ -133,20 +133,20 @@ export default function Home() {
                             <div>
                                 <div>
                                     <Image
-                                        src={images.tokenCardano}
-                                        alt="cardano"
-                                        className={styles['cardano']}
+                                        src={images.token}
+                                        alt="token"
+                                        className={styles['token']}
                                         loading="lazy"
                                     />
                                 </div>
-                                <h2>Cardano blockchain</h2>
+                                <h2>Binance blockchain</h2>
                             </div>
                             <div>
                                 <div className={styles.absolute}>
                                     <Image
                                         src={images.tokenPie}
-                                        alt="cardano"
-                                        className={styles['cardano']}
+                                        alt="token"
+                                        className={styles['token']}
                                         loading="lazy"
                                     />
                                     <CountUp
@@ -168,8 +168,8 @@ export default function Home() {
                                 <div className={styles.absolute}>
                                     <Image
                                         src={images.tokenPie}
-                                        alt="cardano"
-                                        className={styles['cardano']}
+                                        alt="token"
+                                        className={styles['token']}
                                         loading="lazy"
                                     />
                                     <CountUp

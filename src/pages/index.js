@@ -8,6 +8,7 @@ import Section from '../components/Section';
 import Grid12 from '../components/Grid-1-2';
 import Navbar from '../components/Navbar';
 import Scroll from '../components/Scroll';
+import Video from '../components/Video'
 import Card from '../components/Card';
 import Carousel from '../components/Carousel';
 import Action from '../components/Action';
@@ -20,7 +21,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import styles from '../styles/Home.module.scss'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import CountUp from 'react-countup';
@@ -60,9 +60,7 @@ export default function Home() {
               <div className={styles.buttons}>
                 <Link href="#contact">Collaborate with us <ArrowOutwardIcon /> </Link>
               </div>
-              <div className={styles['buttons-dark']}>
-                <Link href="/">Play video <PlayArrowIcon />  </Link>
-              </div>
+              <Video videoSource={'/videos/main.mp4'} />
             </div>
           </div>
           <div className={styles.stats}>
@@ -169,7 +167,7 @@ export default function Home() {
             </div>
             <div className={styles['buttons-container']}>
               <div className={styles.buttons}>
-                <Link href="/">Read more <ArrowOutwardIcon /> </Link>
+                <Link href="/about">Read more <ArrowOutwardIcon /> </Link>
               </div>
             </div>
             <Card className={styles.quote}>
@@ -247,7 +245,7 @@ export default function Home() {
                 <Card>Utility token issued by PISK used for payment of services of Subject Matter
                   Experts
                   <div className={styles.buttons}>
-                    <Link href="/">Read more <ArrowOutwardIcon /> </Link>
+                    <Link href="/tokenomics">Read more <ArrowOutwardIcon /> </Link>
                   </div>
                 </Card>
               </div>

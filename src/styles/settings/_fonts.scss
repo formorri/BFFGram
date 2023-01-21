@@ -11,13 +11,15 @@ $small-font: 1 - $font-size-multiplier;
 $normal-font: 1;
 $large-font: 1 + $font-size-multiplier;
 
+$url:'../../../public/fonts/' ;
+
 @font-face {
     font-family: 'SF UI Display';
-    src: url(../../assets/fonts/SFUIDisplay-Medium.eot);
-    src: url(../../assets/fonts/SFUIDisplay-Medium.eot?#iefix) format('embedded-opentype'),
-        url(../../assets/fonts/SFUIDisplay-Medium.woff2) format('woff2'),
-        url(../../assets/fonts/SFUIDisplay-Medium.woff) format('woff'),
-        url(../../assets/fonts/SFUIDisplay-Medium.ttf) format('truetype');
+    src: url($url + 'SFUIDisplay-Bold.eot');
+    src: url($url + 'SFUIDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url($url + 'SFUIDisplay-Medium.woff2') format('woff2'),
+        url($url + 'SFUIDisplay-Medium.woff') format('woff'),
+        url($url + 'SFUIDisplay-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -25,11 +27,11 @@ $large-font: 1 + $font-size-multiplier;
 
 @font-face {
     font-family: 'SF UI Display';
-    src: url(../../assets/fonts/SFUIDisplay-Bold.eot);
-    src: url(../../assets/fonts/SFUIDisplay-Bold.eot?#iefix) format('embedded-opentype'),
-        url(../../assets/fonts/SFUIDisplay-Bold.woff2) format('woff2'),
-        url(../../assets/fonts/SFUIDisplay-Bold.woff) format('woff'),
-        url(../../assets/fonts/SFUIDisplay-Bold.ttf) format('truetype');
+    src: url($url + 'SFUIDisplay-Bold.eot');
+    src: url($url + 'SFUIDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url($url + 'SFUIDisplay-Bold.woff2') format('woff2'),
+        url($url + 'SFUIDisplay-Bold.woff') format('woff'),
+        url($url + 'SFUIDisplay-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -37,11 +39,11 @@ $large-font: 1 + $font-size-multiplier;
 
 @font-face {
     font-family: 'SF UI Display';
-    src: url(../../assets/fonts/SFUIDisplay-Thin.eot);
-    src: url(../../assets/fonts/SFUIDisplay-Thin.eot?#iefix) format('embedded-opentype'),
-        url(../../assets/fonts/SFUIDisplay-Thin.woff2) format('woff2'),
-        url(../../assets/fonts/SFUIDisplay-Thin.woff) format('woff'),
-        url(../../assets/fonts/SFUIDisplay-Thin.ttf) format('truetype');
+    src: url($url + 'SFUIDisplay-Thin.eot');
+    src: url($url + 'SFUIDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        url($url + 'SFUIDisplay-Thin.woff2') format('woff2'),
+        url($url + 'SFUIDisplay-Thin.woff') format('woff'),
+        url($url + 'SFUIDisplay-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -49,11 +51,11 @@ $large-font: 1 + $font-size-multiplier;
 
 @font-face {
     font-family: 'SF UI Display';
-    src: url(../../assets/fonts/SFUIDisplay-Light.eot);
-    src: url(../../assets/fonts/SFUIDisplay-Light.eot?#iefix) format('embedded-opentype'),
-        url(../../assets/fonts/SFUIDisplay-Light.woff2) format('woff2'),
-        url(../../assets/fonts/SFUIDisplay-Light.woff) format('woff'),
-        url(../../assets/fonts/SFUIDisplay-Light.ttf) format('truetype');
+    src: url($url + 'SFUIDisplay-Light.eot');
+    src: url($url + 'SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url($url + 'SFUIDisplay-Light.woff2') format('woff2'),
+        url($url + 'SFUIDisplay-Light.woff') format('woff'),
+        url($url + 'SFUIDisplay-Light.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;

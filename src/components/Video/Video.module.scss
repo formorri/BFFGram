@@ -1,0 +1,32 @@
+@use '../../styles/settings/index.scss' as *;
+
+.buttons-dark {
+    @include dark-button;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .video {
+        display: flex;
+        max-width: 80rem;
+        flex-direction: column;
+
+        &__close {
+            color: $white-primary;
+            align-self: end;
+        }
+
+        &__video {
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+            align-self: center;
+        }
+    }
+}

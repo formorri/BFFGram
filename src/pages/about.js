@@ -9,6 +9,7 @@ import Grid12 from '../components/Grid-1-2';
 import Grid13 from '../components/Grid-1-3';
 import Navbar from '../components/Navbar';
 import Scroll from '../components/Scroll';
+import Video from '../components/Video'
 import Card from '../components/Card';
 import Action from '../components/Action';
 import Footer from '../components/Footer';
@@ -118,9 +119,10 @@ export default function Home() {
                     <div className={styles.description}>
                         <p>Write up about Monah’s accomplishments, passion for the company….Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni.</p>
                     </div>
-                    <div className={styles['buttons-dark']}>
+                    <Video videoSource={'/videos/ceo.mp4'} />
+                    {/* <div className={styles['buttons-dark']}>
                         <Link href="/">Play video <PlayArrowIcon />  </Link>
-                    </div>
+                    </div> */}
                 </Grid12>
                 <Image
                     src={images.aboutFounder}

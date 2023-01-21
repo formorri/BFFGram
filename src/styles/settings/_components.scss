@@ -159,6 +159,8 @@ $hero-top-margin-desktop: 8rem;
     border-radius: $border-radius;
     border: $border-weight $dark-primary;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
+    width: fit-content;
 
     a {
         color: $dark-primary;
@@ -185,8 +187,10 @@ $hero-top-margin-desktop: 8rem;
     border-radius: $border-radius;
     transition: 0.3s ease-in-out;
     background-color: $dark-primary;
+    cursor: pointer;
+    width: fit-content;
 
-    a {
+    a{
         color: $white-primary;
         font-weight: bold;
         display: flex;
@@ -194,6 +198,7 @@ $hero-top-margin-desktop: 8rem;
         align-items: center;
         justify-content: center;
         column-gap: 0.5rem;
+        margin: 0;
     }
 
     &:hover {
