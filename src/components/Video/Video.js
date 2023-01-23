@@ -26,9 +26,9 @@ const Video = ({videoSource}) => {
                         <IconButton className={styles['video__close']} onClick={() => setModal(false)}>
                             <CloseIcon />
                         </IconButton>
-                        <video controls autoplay className={styles['video__video']}>
-                            {/* <source src={videoSource} type="video/mp4" /> */}
-                            <source src={`${process.env.PUBLIC_URL}${videoSource}`} type="video/mp4" />
+                        <video controls autoPlay className={styles['video__video']}>
+                            <source src={videoSource} type="video/mp4" />
+                            {/* <source src={`${process.env.PUBLIC_URL}/videos/${videoSource}`} type="video/mp4" /> */}
                         </video>
                     </div>
                 </div>
