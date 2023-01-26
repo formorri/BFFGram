@@ -10,13 +10,15 @@ module.exports = nextConfig
 const path = require('path')
 
 module.exports = {
-  // assetPrefix: './',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
     unoptimized: true,
   },
+  // env: {
+  //   BASE_URL: process.env.BASE_URL,
+  // }
 }
 
 // module.exports = {
