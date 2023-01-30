@@ -117,7 +117,7 @@ export default function Home() {
                         <h1>We are a Woman lead Company</h1>
                     </div>
                     <div className={styles.description}>
-                        <p>Write up about Monah’s accomplishments, passion for the company….Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni.</p>
+                        <p>Monah Al Jneibi is an Emirati citizen from Abu Dhabi, United Arab Emirates (UAE). Monah holds a Master Degree of Education Leadership. Her educational journey has been a series of choices and alternatives between the business and education fields. Some of the companies she worked for are: Royal Jet, Emirates Advanced Investments, Abu Dhabi Retirement, Pensions and Benefits Fund and Emirates Nuclear Energy Corporation</p>
                     </div>
                     <Video videoSource={'/videos/ceo.mp4'} />
                     {/* <div className={styles['buttons-dark']}>
@@ -133,7 +133,8 @@ export default function Home() {
                 <div className={styles['section2__row3']}>
                     <div className={styles['section2__row3--text']}>
                         <h2>
-                            Quote from Monah Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas hic ullam necessitatibus aut
+                            We hope to help bring back Social Media to its roots of connecting families. At BFFGram, we support one or more Sustainable Development Goals *SDGs) such as Zero Hunger.
+                            Join us in becoming a role model to others as we strive to become the first social media app internationally to be lead by a woman.
                         </h2>
                     </div>
                     <Image

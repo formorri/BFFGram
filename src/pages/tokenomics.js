@@ -74,7 +74,7 @@ export default function Home() {
                             <h1>Outline and Uses</h1>
                         </div>
                         <div className={styles.description}>
-                            <p>Short description about the purpose of using the blockchain ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni.</p>
+                            <p>A utility token, used for in app purchases like consultations with subject matter experts.</p>
                         </div>
                         <Image
                             src={images.token1}
