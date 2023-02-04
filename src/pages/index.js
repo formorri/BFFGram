@@ -41,7 +41,7 @@ export default function Home() {
         <meta property="og:description" content="All In One Application" />
         <meta property="og:image" content={images.logo} />
         <meta name="keywords"
-          content="BFFGram, social media application, cardano blockchain, social networking platform" />
+          content="BFFGram, social media application, binance blockchain, social networking platform" />
         <meta name="author" content="Lam Zi Xin" />
 
       </Head>
@@ -188,7 +188,8 @@ export default function Home() {
                 />
               </div>
               <div className={styles['quote__text']}>
-                Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni corporis
+                We hope to help bring back Social Media to its roots of connecting families. At BFFGram, we support one or more Sustainable Development Goals *SDGs) such as Zero Hunger.
+                Join us in becoming a role model to others as we strive to become the first social media app internationally to be lead by a woman.
               </div>
             </Card>
           </div>
@@ -278,11 +279,11 @@ export default function Home() {
                 id="panel1a-header"
                 className={styles['accordion-summary']}
               >
-                <h2>Lorem ipsum dolor?</h2>
+                <h2>When will the BFF Gram token be available?</h2>
               </AccordionSummary>
               <AccordionDetails className={styles['accordion-details']}>
                 <p>
-                  Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni corporis
+                  The listing for it is currently planned for the end of February or early March 2023. The token will be listed on Coinstore.
                 </p>
               </AccordionDetails>
             </Accordion>
@@ -299,11 +300,11 @@ export default function Home() {
                 id="panel1a-header"
                 className={styles['accordion-summary']}
               >
-                <h2>Lorem ipsum dolor?</h2>
+                <h2>How much does one token cost?</h2>
               </AccordionSummary>
               <AccordionDetails className={styles['accordion-details']}>
                 <p>
-                  Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni corporis
+                  It is US$0.02 for one token
                 </p>
               </AccordionDetails>
             </Accordion>
@@ -320,11 +321,11 @@ export default function Home() {
                 id="panel1a-header"
                 className={styles['accordion-summary']}
               >
-                <h2>Lorem ipsum dolor?</h2>
+                <h2>What is a pre-sale?</h2>
               </AccordionSummary>
               <AccordionDetails className={styles['accordion-details']}>
                 <p>
-                  Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni corporis
+                  A pre-sale is an event period where people can invest in the BFF Gram Token by purchasing it at a special pre-sale price of US$0.02 per token. A SAFT (Simple Agreement for Future Tokens) agreement will be signed for any potential investor as a form of investment contract.
                 </p>
               </AccordionDetails>
             </Accordion>
@@ -341,11 +342,116 @@ export default function Home() {
                 id="panel1a-header"
                 className={styles['accordion-summary']}
               >
-                <h2>Lorem ipsum dolor?</h2>
+                <h2>What is the price of the token upon listing?</h2>
               </AccordionSummary>
               <AccordionDetails className={styles['accordion-details']}>
                 <p>
-                  Lorem ipsum dolor sit amet. Hic voluptate velit qui inventore quas a mollitia suscipit hic ullam necessitatibus aut provident tempore. Quo voluptas esse id natus pariatur sed magni enim qui magni corporis
+                  At the moment, the targeted listing price will be US$0.08 when the listing is live
+                </p>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              className={styles['accordion']}
+              sx={{
+                borderBottom: 1,
+                borderTop: 0
+              }}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={styles['accordion-summary']}
+              >
+                <h2>How many tokens can I buy/What is the minimum investment?</h2>
+              </AccordionSummary>
+              <AccordionDetails className={styles['accordion-details']}>
+                <p>
+                  There is no minimum investment however, it is encouraged to be a round figure (for example, US$200, US$2600) so that the number of tokens one is allocated will be a number that is easier to manage
+                </p>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              className={styles['accordion']}
+              sx={{
+                borderBottom: 1,
+                borderTop: 0
+              }}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={styles['accordion-summary']}
+              >
+                <h2>Is the BFF Gram app available?</h2>
+              </AccordionSummary>
+              <AccordionDetails className={styles['accordion-details']}>
+                <p>
+                  The app is currently in the testing phases. Interested users are highly encouraged to sign up here (insert email link or link to registration form) so we can send you details of when a test version can be available. We would love to hear feedback so we can improve on any features or fix bugs so that upon launch, you will have the best experience and love it!
+                </p>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              className={styles['accordion']}
+              sx={{
+                borderBottom: 1,
+                borderTop: 0
+              }}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={styles['accordion-summary']}
+              >
+                <h2>When will the BFF Gram app be available?</h2>
+              </AccordionSummary>
+              <AccordionDetails className={styles['accordion-details']}>
+                <p>
+                  It is slated to launch in the middle of the year and we will post updates as the production is underway along with some teasers and more
+                </p>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              className={styles['accordion']}
+              sx={{
+                borderBottom: 1,
+                borderTop: 0
+              }}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={styles['accordion-summary']}
+              >
+                <h2>Will the app be available worldwide?</h2>
+              </AccordionSummary>
+              <AccordionDetails className={styles['accordion-details']}>
+                <p>
+                  The current plan is to launch it within the UK with Subject Matter Experts but we do aim to expand in future. For those residing outside of the UK, please do register your interest here (insert link)
+                </p>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              className={styles['accordion']}
+              sx={{
+                borderBottom: 1,
+                borderTop: 0
+              }}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={styles['accordion-summary']}
+              >
+                <h2>I have other questions, where can I find the answers?</h2>
+              </AccordionSummary>
+              <AccordionDetails className={styles['accordion-details']}>
+                <p>
+                  Thank you so much for your interest! Please don’t hesitate to email us here (insert link) or use the website contact form to reach out and our team will get back to you as soon as we can to answer your queries.
                 </p>
               </AccordionDetails>
             </Accordion>

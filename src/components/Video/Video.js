@@ -28,7 +28,7 @@ const Video = ({videoSource}) => {
                         </IconButton>
                         <video controls autoPlay className={styles['video__video']}>
                             <source src={videoSource} type="video/mp4" />
-                            {/* <source src={`${process.env.PUBLIC_URL}/videos/${videoSource}`} type="video/mp4" /> */}
+                            {/* <source src={`${process.env.NEXT_PUBLIC_URL}/video/${videoSource}`} type="video/mp4" /> */}
                         </video>
                     </div>
                 </div>

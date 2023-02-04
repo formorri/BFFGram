@@ -269,7 +269,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href='/'>
+                    <Link href='https://www.linkedin.com/in/monahaljneibi'>
                       <LinkedInIcon></LinkedInIcon>
                     </Link>
                   </li>
