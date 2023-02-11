@@ -236,53 +236,74 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      Consequat aliqua veniam officia,
-                    </li>
-                    <li>
-                      Occaecat laboris ad adipisicing.
-                    </li>
-                    <li>
-                      Occaecat laboris ad adipisicing.
-                    </li>
-                    <li>
-                      Occaecat laboris ad adipisicing.
+                      Abu Dhabi, UAE
                     </li>
                   </ul>
                 </Card>
               </Grid12>
+              <Card className={styles.text}>
+                <div>
+                  <h2>Email</h2>
+                </div>
+                <ul>
+                  <li>
+                    <Link href='mailto:contactus@bffgram.com' className={styles.email}>
+                      contactus@bffgram.com
+                      <Image
+                        src={images.star}
+                        alt="star"
+                        className={styles['star']}
+                        loading="lazy"
+                      />
+                    </Link>
+                  </li>
+                </ul>
+              </Card>
               <Card className={`${styles["text"]} ${styles["contacts"]}`}>
                 <div>
                   <h2>Telephone</h2>
-                  <p>012-8346587348</p>
-                  <p>012-8346587348</p>
+                  <ul className={styles.tel}>
+                    <li>
+                      <Link href='tel:+971507086658'>
+                        +971507086658
+                        <Image
+                          src={images.star}
+                          alt="star"
+                          className={styles['star']}
+                          loading="lazy"
+                        />
+                      </Link>
+                    </li>
+                  </ul>
+                  {/* <p>+971507086658</p> */}
                 </div>
 
                 <ul>
                   <li>
-                    <Link href='/'>
+                    <Link href='https://www.instagram.com/invites/contact/?i=v777t1mecqqp&utm_content=76l7sbn'>
                       <InstagramIcon></InstagramIcon>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href='/'>
                       <FacebookIcon></FacebookIcon>
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href='https://www.linkedin.com/in/monahaljneibi'>
                       <LinkedInIcon></LinkedInIcon>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href='/'>
                       <TwitterIcon></TwitterIcon>
                     </Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link href='/'>
                       <YouTubeIcon></YouTubeIcon>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </Card>
             </div>

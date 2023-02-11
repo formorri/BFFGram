@@ -46,8 +46,10 @@
 
   .grid {
     display: grid;
+    position: relative;
     grid-template-columns: 1fr;
     row-gap: 1rem;
+    // padding: 0 $small-padding;
   }
 
   .form {
@@ -139,10 +141,11 @@
       display: flex;
       row-gap: $row-gap;
       flex-direction: column;
+      width: 100%;
 
-      &>div {
-        row-gap: $row-gap;
-      }
+      // &>div {
+      //   row-gap: $row-gap;
+      // }
 
       .text {
         $first-column: 40%;
@@ -196,6 +199,15 @@
               }
             }
           }
+        }
+
+        .email{
+          text-transform: lowercase;
+        }
+
+        .tel{
+          padding: 0;
+          border: none;
         }
       }
     }
@@ -405,6 +417,31 @@
           height: $button-size;
           padding: 1rem;
 
+          svg {
+            $size: 2rem;
+            width: $size;
+            height: $size;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include gt-lg{
+  $button-size: 8rem;
+  .container {
+    padding: $large-padding $extra-large-padding;
+    .info{
+      .back-to-top {
+        width: $button-size;
+        height: $button-size;
+  
+        .scroll {
+          width: $button-size;
+          height: $button-size;
+          padding: 1rem;
+  
           svg {
             $size: 2rem;
             width: $size;

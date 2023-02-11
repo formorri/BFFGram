@@ -13,3 +13,10 @@
         padding: 0 $large-padding;
     }
 }
+@include gt-lg{
+    .section{
+        margin: 5rem 0;
+        z-index: 1;
+        padding: 0 $extra-large-padding;
+    }
+}
