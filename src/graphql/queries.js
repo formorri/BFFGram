@@ -7,6 +7,7 @@ export const getCandidate = /* GraphQL */ `
       id
       name
       email
+      message
       createdAt
       updatedAt
     }
@@ -23,6 +24,7 @@ export const listCandidates = /* GraphQL */ `
         id
         name
         email
+        message
         createdAt
         updatedAt
       }

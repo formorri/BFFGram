@@ -9,6 +9,7 @@ export const onCreateCandidate = /* GraphQL */ `
       id
       name
       email
+      message
       createdAt
       updatedAt
     }
@@ -22,6 +23,7 @@ export const onUpdateCandidate = /* GraphQL */ `
       id
       name
       email
+      message
       createdAt
       updatedAt
     }
@@ -35,6 +37,7 @@ export const onDeleteCandidate = /* GraphQL */ `
       id
       name
       email
+      message
       createdAt
       updatedAt
     }

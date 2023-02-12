@@ -4,4 +4,5 @@ type Candidate
    id: ID!
    name: String!
    email: AWSEmail!
+   message: String
 }

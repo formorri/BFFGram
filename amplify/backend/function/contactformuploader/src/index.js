@@ -7,6 +7,7 @@ exports.handler = async (event) => {
       //pull off items from stream
       const candidateName = streamedItem.dynamodb.NewImage.name.S
       const candidateEmail = streamedItem.dynamodb.NewImage.email.S
+      const candidateMessage = streamedItem.dynamodb.NewImage.message.S
 
       await ses
           .sendEmail({
@@ -15,9 +16,9 @@ exports.handler = async (event) => {
             },
             Source: process.env.SES_EMAIL,
             Message: {
-              Subject: { Data: 'Candidate Submission' },
+              Subject: { Data: 'New Contact From BFFGRam' },
               Body: {
-                Text: { Data: `My name is ${candidateName}. You can reach me at ${candidateEmail}` },
+                Text: { Data: `A new contact named ${candidateName} has submitted their info. You can reach this person through ${candidateEmail}. The person has sent a message "${candidateMessage}"` },
               },
             },
           })
