@@ -10,7 +10,7 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slidesToShow, setSlidesToShow] = useState(3);
+  const [slidesToShow, setSlidesToShow] = useState(1);
   const carouselRef = useRef();
   const { width } = useWindowSize();
 

@@ -13,7 +13,14 @@
     },
     "categories": {
       "function": {
-        "contactformuploader": {}
+        "contactformuploader": {
+          "sesEmail": "founder@bffgram.com",
+          "deploymentBucketName": "amplify-bffgram-dev-173640-deployment",
+          "s3Key": "amplify-builds/contactformuploader-53713576726b50554979-build.zip"
+        }
+      },
+      "api": {
+        "bffgram": {}
       }
     }
   }

@@ -33,5 +33,31 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "parameters": {
+    "AMPLIFY_function_contactformuploader_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactformuploader"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactformuploader_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactformuploader"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactformuploader_sesEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactformuploader"
+        }
+      ]
+    }
   }
 }

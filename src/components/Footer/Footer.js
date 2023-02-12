@@ -23,6 +23,9 @@ import Card from '../../components/Card';
 import Link from 'next/link';
 import { sendContactForm } from '../../../lib/api';
 
+import { API } from 'aws-amplify'
+import { createCandidate } from '../../graphql/mutations'
+
 
 const Input = styled(OutlinedInput)({
   border: '2px solid #CFCFCF',
