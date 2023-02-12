@@ -1,7 +1,7 @@
 import '../styles/globals.scss';
 import Amplify from '@aws-amplify/core'
-import config from '../../src/aws-exports'
-Amplify.configure(config)
+import awsmobile from '../../src/aws-exports'
+Amplify.configure(awsmobile)
 
 
 function MyApp({ Component, pageProps }) {
@@ -9,3 +9,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+ 
