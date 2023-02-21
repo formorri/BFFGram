@@ -48,58 +48,81 @@ const StyledFormHelperText = styled(FormHelperText)({
   marginLeft: '0',
 });
 
-function MyFormHelperText() {
-  const { filled } = useFormControl() || {};
+// function MyFormHelperText() {
+//   const { filled } = useFormControl() || {};
 
-  const helperText = useMemo(() => {
-    if (!filled) {
-      return 'This field is required';
-    }
+//   const helperText = useMemo(() => {
+//     if (!filled) {
+//       return 'This field is required';
+//     }
 
-    return '';
-  }, [filled]);
+//     return '';
+//   }, [filled]);
 
-  return <StyledFormHelperText>{helperText}</StyledFormHelperText>;
-}
+//   return <StyledFormHelperText>{helperText}</StyledFormHelperText>;
+// }
 
 const Footer = () => {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
-    error: null,
-    submitted: false
-  })
-  const { error, submitted } = formState
+  // const [formState, setFormState] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  //   error: null,
+  //   submitted: false
+  // })
+  // const { error, submitted } = formState
+
+  // const handleContactFormSubmit = async (e) => {
+  //   e.preventDefault()
+  //   const { name, email, message } = formState
+  //   if (name && email && message) {
+  //     try {
+  //       // TODO: Add code to send email here
+  //       console.log(name, email, message)
+  //       await API.graphql({
+  //         query: createCandidate,
+  //         variables: {
+  //           input: {
+  //             name,
+  //             email,
+  //             message
+  //           },
+  //         },
+  //       })
+  //       setFormState(() => ({
+  //         submitted: true,
+  //       }));
+
+  //     } catch (e) {
+  //       setFormState(() => ({
+  //         error: e.message,
+  //       }));
+  //     }
+  //   }
+  // }
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxvX3hDe9C9PKBSRdxoshsbOuhNI8BZnIryEq5YFGXBpJxJa3tE_86Zl0tJeY6KeTFO/exec'
+  const form = document.forms['email-subscribers']
+  // const form = [
+  //   name,
+  //   email,
+  //   message,
+  // ]
+  // const {name, email, message}= form;
 
   const handleContactFormSubmit = async (e) => {
     e.preventDefault()
-    const { name, email, message } = formState
-    if (name && email && message) {
-      try {
-        // TODO: Add code to send email here
-        console.log(name, email, message)
-        await API.graphql({
-          query: createCandidate,
-          variables: {
-            input: {
-              name,
-              email,
-              message
-            },
-          },
-        })
-        setFormState(() => ({
-          submitted: true,
-        }));
-
-      } catch (e) {
-        setFormState(() => ({
-          error: e.message,
-        }));
-      }
-    }
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
   }
+
+  // form.addEventListener('submit', e => {
+  //   e.preventDefault()
+  //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+  //     .then(response => console.log('Success!', response))
+  //     .catch(error => console.error('Error!', error.message))
+  // })
 
   return (
     <footer id='contact' className={styles.container}>
@@ -135,110 +158,47 @@ const Footer = () => {
             />
           </div>
 
-          {error && <p className={styles.error}>{error}</p>}
-          {submitted && (
-            <p className={styles.success}>Thanks for contacting us!</p>
-          )}
-
-          <form className={styles.field} onSubmit={handleContactFormSubmit}>
+          <form 
+          name='email-subscribers'
+          className={styles.field}
+          >
             <FormControl
             >
               <Input
                 type='text'
                 name='name'
-                value={formState.name}
-                onChange={(e) =>
-                  setFormState({ ...formState, name: e.target.value })
-                }
                 placeholder="Enter your name"
+                value={form.name}
                 required
               />
-              <MyFormHelperText />
             </FormControl>
             <FormControl>
               <Input
                 type='email'
                 name='email'
-                value={formState.email}
-                onChange={(e) =>
-                  setFormState({ ...formState, email: e.target.value })
-                }
                 placeholder="Enter your email"
+                value={form.email}
                 required
               />
-              <MyFormHelperText />
             </FormControl>
             <FormControl>
               <Input
                 type='text'
                 name='message'
-                value={formState.message}
-                onChange={(e) =>
-                  setFormState({ ...formState, message: e.target.value })
-                }
                 placeholder="Drop us a message"
+                value={form.message}
                 multiline
                 maxRows={4}
               />
             </FormControl>
             <Button
               className={styles.submit}
-              disabled={
-                !formState.name || !formState.email
-              }
               onClick={handleContactFormSubmit}
             >
               <ArrowOutwardIcon />
               Submit
             </Button>
           </form>
-          {/* <form className={styles.field} >
-            <FormControl
-            >
-              <Input
-                type='text'
-                name='name'
-                value={values.name}
-                onChange={handleChange}
-                placeholder="Enter your name"
-                required
-              />
-              <MyFormHelperText />
-            </FormControl>
-            <FormControl>
-              <Input
-                type='email'
-                name='email'
-                value={values.email}
-                onChange={handleChange}
-                placeholder="Enter your email"
-                required
-              />
-              <MyFormHelperText />
-            </FormControl>
-            <FormControl>
-              <Input
-                type='text'
-                name='message'
-                value={values.message}
-                onChange={handleChange}
-                placeholder="Drop us a message"
-                multiline
-                maxRows={4}
-              />
-            </FormControl>
-            <Button
-              className={styles.submit}
-              disabled={
-                !values.name || !values.email
-              }
-              onClick={onSubmit}
-            >
-              <ArrowOutwardIcon />
-              Submit
-            </Button>
-          </form> */}
-
 
         </div>
         <div className={styles.flex}>
