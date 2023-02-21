@@ -42,9 +42,7 @@ if( req.method === 'POST'){
     console.log(err);
     return res.status(400).json({message: err.message})
   }
-
 }
-
   // console.log(req.body);
   res.status(400).json({message: 'Bad Request'})
 };

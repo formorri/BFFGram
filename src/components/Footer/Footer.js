@@ -21,10 +21,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import Card from '../../components/Card';
 import Link from 'next/link';
-// import { sendContactForm } from '../../../lib/api';
+import { sendContactForm } from '../../../lib/api';
 
-import { API } from 'aws-amplify'
-import { createCandidate } from '../../graphql/mutations'
 
 
 const Input = styled(OutlinedInput)({
@@ -62,44 +60,47 @@ function MyFormHelperText() {
   return <StyledFormHelperText>{helperText}</StyledFormHelperText>;
 }
 
+
+const initValues = {
+  name: '',
+  email: '',
+  message: ''
+}
+const initState = { values: initValues };
+
+
 const Footer = () => {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
+  const [state, setState] = useState({
+    values: initState,
     error: null,
-    submitted: false
-  })
-  const { error, submitted } = formState
-
-  const handleContactFormSubmit = async (e) => {
-    e.preventDefault()
-    const { name, email, message } = formState
-    if (name && email && message) {
-      try {
-        // TODO: Add code to send email here
-        console.log(name, email, message)
-        await API.graphql({
-          query: createCandidate,
-          variables: {
-            input: {
-              name,
-              email,
-              message
-            },
-          },
-        })
-        setFormState(() => ({
-          submitted: true,
-        }));
-
-      } catch (e) {
-        setFormState(() => ({
-          error: e.message,
-        }));
-      }
+    submitted: false,
+  });
+  const { values, error, submitted } = state;
+  const handleChange = ({ target }) => setState((prev) => ({
+    ...prev,
+    values: {
+      ...prev.values,
+      [target.name]: target.value,
     }
-  }
+  }));
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+    }));
+    try {
+      await sendContactForm(values);
+      setState(() => ({
+        values: initState,
+        submitted: true,
+      }));
+    } catch (err) {
+      setState((prev) => ({
+        ...prev,
+        error: err.message,
+      }));
+    }
+  };
+
 
   return (
     <footer id='contact' className={styles.container}>
@@ -139,60 +140,7 @@ const Footer = () => {
           {submitted && (
             <p className={styles.success}>Thanks for contacting us!</p>
           )}
-
-          <form className={styles.field} onSubmit={handleContactFormSubmit}>
-            <FormControl
-            >
-              <Input
-                type='text'
-                name='name'
-                value={formState.name}
-                onChange={(e) =>
-                  setFormState({ ...formState, name: e.target.value })
-                }
-                placeholder="Enter your name"
-                required
-              />
-              <MyFormHelperText />
-            </FormControl>
-            <FormControl>
-              <Input
-                type='email'
-                name='email'
-                value={formState.email}
-                onChange={(e) =>
-                  setFormState({ ...formState, email: e.target.value })
-                }
-                placeholder="Enter your email"
-                required
-              />
-              <MyFormHelperText />
-            </FormControl>
-            <FormControl>
-              <Input
-                type='text'
-                name='message'
-                value={formState.message}
-                onChange={(e) =>
-                  setFormState({ ...formState, message: e.target.value })
-                }
-                placeholder="Drop us a message"
-                multiline
-                maxRows={4}
-              />
-            </FormControl>
-            <Button
-              className={styles.submit}
-              disabled={
-                !formState.name || !formState.email
-              }
-              onClick={handleContactFormSubmit}
-            >
-              <ArrowOutwardIcon />
-              Submit
-            </Button>
-          </form>
-          {/* <form className={styles.field} >
+          <form className={styles.field} >
             <FormControl
             >
               <Input
@@ -237,9 +185,7 @@ const Footer = () => {
               <ArrowOutwardIcon />
               Submit
             </Button>
-          </form> */}
-
-
+          </form>
         </div>
         <div className={styles.flex}>
           <div className={styles.info}>
