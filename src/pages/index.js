@@ -388,7 +388,7 @@ export default function Home() {
               </AccordionSummary>
               <AccordionDetails className={styles['accordion-details']}>
                 <p>
-                  The app is currently in the testing phases. Interested users are highly encouraged to sign up here (insert email link or link to registration form) so we can send you details of when a test version can be available. We would love to hear feedback so we can improve on any features or fix bugs so that upon launch, you will have the best experience and love it!
+                  The app is currently in the testing phases. Interested users are highly encouraged to email us  <Link href='#contact'>here</Link> so we can send you details of when a test version can be available. We would love to hear feedback so we can improve on any features or fix bugs so that upon launch, you will have the best experience and love it!
                 </p>
               </AccordionDetails>
             </Accordion>
@@ -430,7 +430,7 @@ export default function Home() {
               </AccordionSummary>
               <AccordionDetails className={styles['accordion-details']}>
                 <p>
-                  The current plan is to launch it within the UK with Subject Matter Experts but we do aim to expand in future. For those residing outside of the UK, please do register your interest here (insert link)
+                  The current plan is to launch it within the UK with Subject Matter Experts but we do aim to expand in future. For those residing outside of the UK, please do register your interest <Link href='#contact'>here</Link>
                 </p>
               </AccordionDetails>
             </Accordion>
@@ -451,7 +451,7 @@ export default function Home() {
               </AccordionSummary>
               <AccordionDetails className={styles['accordion-details']}>
                 <p>
-                  Thank you so much for your interest! Please don’t hesitate to email us here (insert link) or use the website contact form to reach out and our team will get back to you as soon as we can to answer your queries.
+                  Thank you so much for your interest! Please don’t hesitate to email us and our team will get back to you as soon as we can to answer your queries.
                 </p>
               </AccordionDetails>
             </Accordion>
