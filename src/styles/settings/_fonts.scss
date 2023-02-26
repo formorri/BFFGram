@@ -99,10 +99,11 @@ $url:'../../../public/fonts/' ;
 
 
 @mixin header-text {
-    @include font-settings-title ($desktop-font-size: 30px);
+    @include font-settings ($desktop-font-size: 70px);
     text-transform: capitalize;
     font-weight: bold;
     font-style: normal;
+    margin: 1rem 0;
 }
 
 @mixin header-secondary-text {

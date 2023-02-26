@@ -24,6 +24,7 @@ export default function Home() {
     return (
         <Container>
             <Head>
+            <link rel='canonical' hreflang="en-gb" href='https://www.bffgram.com/tokenomics'/>
             </Head>
 
             <Background />
@@ -43,8 +44,8 @@ export default function Home() {
                         <div className={styles['sub-header']}>
                             <p>tokenomics</p>
                         </div>
-                        <div className={styles.title}>
-                            <h1>Bringing Utility Into BFF Gram</h1>
+                        <div>
+                            <h2 className={styles.title}>Bringing Utility Into BFF Gram</h2>
                         </div>
                         <div className={styles.description}>
                             <p>Do it all with BFF Gram and get trendy NFTs too with your consultation.</p>
@@ -70,8 +71,8 @@ export default function Home() {
             <Section className={styles.section1}>
                 <Grid12 className={styles['flex-top']}>
                     <div className={styles['section1-header']}>
-                        <div className={styles.title}>
-                            <h1>Outline and Uses</h1>
+                        <div>
+                            <h2 className={styles.title}>Outline and Uses</h2>
                         </div>
                         <div className={styles.description}>
                             <p>A utility token, used for in app purchases like consultations with subject matter experts.</p>
@@ -109,8 +110,8 @@ export default function Home() {
             <Section className={styles.section2}>
                 <Grid12>
                     <div className={styles['section2__column1']}>
-                        <div className={styles.title}>
-                            <h1>2 billion tokens minted</h1>
+                        <div>
+                            <h2 className={styles.title}>2 billion tokens minted</h2>
                         </div>
                         <div className={styles.description}>
                             <ul>
@@ -193,8 +194,8 @@ export default function Home() {
             </Section>
 
             <Section className={styles.section3}>
-                <div className={styles.title}>
-                    <h1>How does it work?</h1>
+                <div>
+                    <h2 className={styles.title}>How does it work?</h2>
                 </div>
                 <div className={styles['section3__flex']}>
                     <Card className={styles.card}>
@@ -233,8 +234,8 @@ export default function Home() {
                         loading="lazy"
                     />
                     <div className={styles['section4__info']}>
-                        <div className={styles.title}>
-                            <h1>Platforming The Creative Community</h1>
+                        <div>
+                            <h2 className={styles.title}>Platforming The Creative Community</h2>
                         </div>
                         <ul>
                             <li>Celebrities, artistes and the like can have their own limited edition NFTs for users</li>
@@ -246,8 +247,8 @@ export default function Home() {
                 </Grid12>
                 <Grid12 className={styles.reorder}>
                     <div className={styles['section4__info']}>
-                        <div className={styles.title}>
-                            <h1>Empowering Knowledge Based Experts</h1>
+                        <div>
+                            <h2 className={styles.title}>Empowering Knowledge Based Experts</h2>
                         </div>
                         <ul>
                             <li>NFTs from them to mark course completion/advice sought/progression or recommendations/etc</li>

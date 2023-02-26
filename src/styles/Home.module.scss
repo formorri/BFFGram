@@ -297,9 +297,6 @@
 
 
 .section5 {
-    h2 {
-        @include header-secondary-text;
-    }
 
     p {
         @include paragraph-light-text
@@ -353,13 +350,13 @@
     align-items: center;
 
 
-    .title {
+    &__title {
         display: flex;
         align-items: center;
 
         .star {
             width: auto;
-            height: 3rem;
+            height: 6rem;
         }
     }
 

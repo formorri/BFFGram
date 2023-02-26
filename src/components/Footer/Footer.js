@@ -126,7 +126,7 @@ const Footer = () => {
       <div className={styles.grid}>
       <div className={`${styles["form"]} ${styles["form-position"]}`}>
           <div className={styles['form__header']}>
-            <h2>Get in touch</h2>
+            <h2 className={styles['form__header--text']}>Get in touch</h2>
             <Image
               src={images.plane}
               alt="plane-message"

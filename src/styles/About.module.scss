@@ -48,6 +48,7 @@
         }
     }
 
+
     &__grid{
         margin-bottom: 3rem;
 
@@ -129,10 +130,7 @@
     &__row3{
         display: flex;
         column-gap: 1rem;
-        
-        &--text{
-            @include header-text;
-        }
+    
 
         .quotes{
             margin: 2rem 0;

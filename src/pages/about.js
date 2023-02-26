@@ -24,6 +24,7 @@ export default function Home() {
     return (
         <Container>
             <Head>
+            <link rel='canonical' hreflang="en-gb" href='https://www.bffgram.com/about'/>
             </Head>
 
             <Background />
@@ -43,8 +44,8 @@ export default function Home() {
                         <div className={styles['sub-header']}>
                             <p>about us</p>
                         </div>
-                        <div className={styles.title}>
-                            <h1>Revolutionising social networking</h1>
+                        <div>
+                            <h2 className={styles.title}>Revolutionising social networking</h2>
                         </div>
                         <div className={styles.description}>
                             <p>Working with BFF Gram means joining a community who are  passionate about transforming the very idea of social networking.</p>
@@ -84,8 +85,8 @@ export default function Home() {
                                 loading="lazy"
                             />
                         </div>
-                        <div className={styles.title}>
-                            <h1>Vision</h1>
+                        <div>
+                            <h2 className={styles.title}>Vision</h2>
                         </div>
                         <div className={styles.description}>
                             <p>To be ranked in both Apple and Google stores as the best social media platform.</p>
@@ -100,8 +101,8 @@ export default function Home() {
                                 loading="lazy"
                             />
                         </div>
-                        <div className={styles.title}>
-                            <h1>Mission</h1>
+                        <div>
+                            <h2 className={styles.title}>Mission</h2>
                         </div>
                         <div className={styles.description}>
                             <p>Creativity. Simplicity. Safety.</p>
@@ -113,8 +114,8 @@ export default function Home() {
 
             <Section className={styles.section2}>
                 <Grid12 className={styles['section2__row1']}>
-                    <div className={styles.title}>
-                        <h1>We are a Woman lead Company</h1>
+                    <div>
+                        <h2 className={styles.title}>We are a Woman lead Company</h2>
                     </div>
                     <div className={styles.description}>
                         <p>Monah Al Jneibi is an Emirati citizen from Abu Dhabi, United Arab Emirates (UAE). Monah holds a Master Degree of Education Leadership. Her educational journey has been a series of choices and alternatives between the business and education fields. Some of the companies she worked for are: Royal Jet, Emirates Advanced Investments, Abu Dhabi Retirement, Pensions and Benefits Fund and Emirates Nuclear Energy Corporation</p>
@@ -132,7 +133,7 @@ export default function Home() {
                 />
                 <div className={styles['section2__row3']}>
                     <div className={styles['section2__row3--text']}>
-                        <h2>
+                        <h2 className={styles.title}>
                             We hope to help bring back Social Media to its roots of connecting families. At BFFGram, we support one or more Sustainable Development Goals *SDGs) such as Zero Hunger.
                             Join us in becoming a role model to others as we strive to become the first social media app internationally to be lead by a woman.
                         </h2>

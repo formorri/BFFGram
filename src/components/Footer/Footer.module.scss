@@ -8,6 +8,7 @@
   color: $white-primary;
   padding: $large-padding $small-padding;
   position: relative;
+  margin: 0;
 
   .absolute {
     position: absolute;
@@ -70,8 +71,10 @@
     }
 
     &__header {
-      h2 {
+
+      &--text{
         margin: 0;
+        @include header-text;
       }
 
       display: flex;
@@ -238,7 +241,7 @@
 
   }
   .back-to-top {
-    $button-size: 7rem;
+    $button-size: 8rem;
     @include paragraph-medium-text;
     @include shadow;
     @include glassmorphism;

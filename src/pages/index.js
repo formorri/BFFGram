@@ -41,8 +41,9 @@ export default function Home() {
         <meta property="og:description" content="All In One Application" />
         <meta property="og:image" content={images.logo} />
         <meta name="keywords"
-          content="BFFGram, social media application, binance blockchain, social networking platform" />
+          content="BFFGram, social media application, binance blockchain, social networking platform, app, bff, gram, social, token, emirati, tokenomics, available, bff gram, social media, womens day" />
         <meta name="author" content="Lam Zi Xin" />
+        <link rel='canonical' hreflang="en-gb" href='https://www.bffgram.com/'/>
 
       </Head>
       <Background />
@@ -50,8 +51,8 @@ export default function Home() {
       <Section className={styles.hero} id="home">
         <Grid12>
           <div>
-            <div className={styles.title}>
-              <h1>All In One App</h1>
+            <div>
+              <h1 className={styles.title}>All In One App</h1>
             </div>
             <div className={styles.description}>
               <p>BFF Gram aims to be one of the most popular social networking platforms in the globe after launching in the UK. This multi-feature application will be known for its family/friends/advisors’ networking capabilities.</p>
@@ -119,8 +120,8 @@ export default function Home() {
       <Section>
         <Grid12 className={styles['flex-top']}>
           <div className={styles['section1-header']}>
-            <div className={styles.title}>
-              <h1>Why You Should Choose Us?</h1>
+            <div>
+              <h2 className={styles.title}>Why You Should Choose Us?</h2>
             </div>
             <Image
               src={images.homePic1}
@@ -159,8 +160,8 @@ export default function Home() {
       <Section>
         <Grid12>
           <div>
-            <div className={styles.title}>
-              <h1>About the company</h1>
+            <div>
+              <h2 className={styles.title}>About the company</h2>
             </div>
             <div className={styles.description}>
               <p>BFF Gram is developing a social networking application that combines creating meaningful connections</p>
@@ -234,8 +235,8 @@ export default function Home() {
             loading="lazy"
           />
           <div>
-            <div className={styles.title}>
-              <h1>Tokenomics</h1>
+            <div>
+              <h1 className={styles.title}>Tokenomics</h1>
             </div>
             <div className={styles.description}>
               <p>Do it all with BFF Gram and get trendy NFTs too with your consultation.</p>
@@ -263,8 +264,8 @@ export default function Home() {
       <Section>
         <Grid12>
           <div className={styles.section5}>
-            <div className={styles.title}>
-              <h1>FAQ</h1>
+            <div>
+              <h2 className={styles.title}>FAQ</h2>
             </div>
             <Accordion
               className={styles['accordion']}
@@ -468,14 +469,14 @@ export default function Home() {
       </Section>
 
       <Section className={styles.section6}>
-        <div className={styles.title}>
+        <div className={styles['section6__title']}>
           <Image
             src={images.star}
             alt="star"
             className={styles['star']}
             loading="lazy"
           />
-          <h1>Testimonials</h1>
+          <h2 className={styles.title}>Testimonials</h2>
           <Image
             src={images.star}
             alt="star"
@@ -542,8 +543,8 @@ export default function Home() {
       </Section>
 
       <Section className={styles.section7}>
-        <div className={styles.title}>
-          <h1>Stay up to date</h1>
+        <div>
+          <h2 className={styles.title}>Stay up to date</h2>
         </div>
         <Carousel className={styles['section7__carousel']}>
           {News.map((item) => {
