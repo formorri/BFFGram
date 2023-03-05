@@ -16,8 +16,12 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import InstagramIcon from '@mui/icons-material/Instagram';
 // import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-// import TwitterIcon from '@mui/icons-material/Twitter';
-// import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faSnapchat } from '@fortawesome/free-brands-svg-icons';
+
 
 import Card from '../../components/Card';
 import Link from 'next/link';
@@ -124,7 +128,7 @@ const Footer = () => {
         />
       </div>
       <div className={styles.grid}>
-      <div className={`${styles["form"]} ${styles["form-position"]}`}>
+        <div className={`${styles["form"]} ${styles["form-position"]}`}>
           <div className={styles['form__header']}>
             <h2 className={styles['form__header--text']}>Get in touch</h2>
             <Image
@@ -204,7 +208,7 @@ const Footer = () => {
             </Card>
           </div>
         </div>
-        <div className={`${styles["info"]} ${styles["email-position"]}`}>
+        {/* <div className={`${styles["info"]} ${styles["email-position"]}`}>
           <div className={styles.info__info}>
             <Card className={styles.text}>
               <div>
@@ -225,38 +229,69 @@ const Footer = () => {
               </ul>
             </Card>
           </div>
-        </div>
+        </div> */}
         <div className={`${styles["info"]} ${styles["contact-position"]}`}>
           <div className={styles.info__info}>
-            <Card className={`${styles["text"]} ${styles["contacts"]}`}>
+            <Card className={styles.text}>
               <div>
                 <h2>Telephone</h2>
-                <ul className={styles.tel}>
-                  <li>
-                    <Link href='tel:+971507086658'>
-                      +971507086658
-                      <Image
-                        src={images.star}
-                        alt="star"
-                        className={styles['star']}
-                        loading="lazy"
-                      />
-                    </Link>
-                  </li>
-                </ul>
-                {/* <p>+971507086658</p> */}
               </div>
-
               <ul>
                 <li>
-                  <Link href='https://www.instagram.com/invites/contact/?i=v777t1mecqqp&utm_content=76l7sbn'>
+                  <Link href='https://wa.me/971507086658'>
+                    +971507086658
+                    <Image
+                      src={images.star}
+                      alt="star"
+                      className={styles['star']}
+                      loading="lazy"
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </Card>
+          </div>
+        </div>
+        <div className={`${styles["info"]} ${styles["socials-position"]}`}>
+          <div className={styles.info__info}>
+            <Card className={styles.text}>
+              <div>
+                <h2>Socials</h2>
+              </div>
+              <ul className={styles.socials}>
+                <li>
+                  <Link target='_blank' rel="nofollow" href='https://www.linkedin.com/company/the-bff-gram/'>
+                    <LinkedInIcon></LinkedInIcon>
+                  </Link>
+                </li>
+                <li>
+                  <Link target='_blank' rel="nofollow" href='https://twitter.com/OfficialBffGram'>
+                    <TwitterIcon></TwitterIcon>
+                  </Link>
+                </li>
+                <li>
+                  <Link target='_blank' rel="nofollow" href='https://www.instagram.com/invites/contact/?i=v777t1mecqqp&utm_content=76l7sbn'>
                     <InstagramIcon></InstagramIcon>
                   </Link>
                 </li>
-
                 <li>
-                  <Link href='https://www.linkedin.com/in/monahaljneibi'>
-                    <LinkedInIcon></LinkedInIcon>
+                  <Link target='_blank' rel="nofollow" href='Team.thebffgram@gmail.com'>
+                    <FontAwesomeIcon icon={faDiscord} />
+                  </Link>
+                </li>
+                <li>
+                  <Link target='_blank' rel="nofollow" href='https://t.me/bffgramofficial'>
+                    <TelegramIcon></TelegramIcon>
+                  </Link>
+                </li>
+                <li>
+                  <Link target='_blank' rel="nofollow" href='https://www.youtube.com/@bffgram'>
+                    <YouTubeIcon></YouTubeIcon>
+                  </Link>
+                </li>
+                <li>
+                  <Link target='_blank' rel="nofollow" href='https://t.snapchat.com/UCf6B9na'>
+                    <FontAwesomeIcon icon={faSnapchat} />
                   </Link>
                 </li>
               </ul>

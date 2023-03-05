@@ -43,9 +43,9 @@ export default function Home() {
         <meta name="keywords"
           content="BFFGram, social media application, binance blockchain, social networking platform, app, bff, gram, social, token, emirati, tokenomics, available, bff gram, social media, womens day" />
         <meta name="author" content="Lam Zi Xin" />
-        <link rel='canonical' hreflang="en-gb" href='https://www.bffgram.com/'/>
-
+        <link rel='canonical' hrefLang="en" href='https://www.bffgram.com/' />
       </Head>
+
       <Background />
       <Navbar />
       <Section className={styles.hero} id="home">
@@ -551,7 +551,7 @@ export default function Home() {
             return (
               <Card className={styles['card']} key={item.id}>
                 <div className={styles.preview}>
-                  <Link href={item.url} target='_blank'>
+                  <Link href={item.url} target='_blank' rel='nofollow'>
                     <div className={styles['preview__container']}>
                       <div className={styles['preview__container--arrow']}>
                         <ArrowForwardIcon />

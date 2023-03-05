@@ -1,2 +1,9 @@
-User-agents: *
-Disallow: 
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.bffgram.com/
+
+# Sitemaps
+Sitemap: https://www.bffgram.com/sitemap.xml

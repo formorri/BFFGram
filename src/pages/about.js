@@ -24,7 +24,7 @@ export default function Home() {
     return (
         <Container>
             <Head>
-            <link rel='canonical' hreflang="en-gb" href='https://www.bffgram.com/about'/>
+            <link rel='canonical' hrefLang="en" href='https://www.bffgram.com/about' />
             </Head>
 
             <Background />
@@ -121,9 +121,6 @@ export default function Home() {
                         <p>Monah Al Jneibi is an Emirati citizen from Abu Dhabi, United Arab Emirates (UAE). Monah holds a Master Degree of Education Leadership. Her educational journey has been a series of choices and alternatives between the business and education fields. Some of the companies she worked for are: Royal Jet, Emirates Advanced Investments, Abu Dhabi Retirement, Pensions and Benefits Fund and Emirates Nuclear Energy Corporation</p>
                     </div>
                     <Video videoSource={'/videos/ceo.mp4'} />
-                    {/* <div className={styles['buttons-dark']}>
-                        <Link href="/">Play video <PlayArrowIcon />  </Link>
-                    </div> */}
                 </Grid12>
                 <Image
                     src={images.aboutFounder}
