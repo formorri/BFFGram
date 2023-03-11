@@ -218,6 +218,9 @@
           width: 1.4rem;
           height: auto;
         }
+        &:hover{
+          color: $circle-3;
+        }
       }
     }
   }
