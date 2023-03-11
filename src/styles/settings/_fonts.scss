@@ -1,9 +1,9 @@
 @use 'media-query' as *;
 
-$line-height-multiplier-title: 2.2;
+$line-height-multiplier-title: 1.18;
 $font-size-multiplier-title: 0.4; //% increase or reduction depending on screen size
 $small-font-title: 1 - $font-size-multiplier-title;
-// $large-font: 1 + $font-size-multiplier-title;
+$large-font: 1 + $font-size-multiplier-title;
 
 $font-size-multiplier: 0.2; //% increase or reduction depending on screen size
 $line-height-multiplier: 1.18;
@@ -97,9 +97,8 @@ $url:'../../../public/fonts/' ;
 }
 
 
-
 @mixin header-text {
-    @include font-settings ($desktop-font-size: 70px);
+    @include font-settings-title ($desktop-font-size: 70px);
     text-transform: capitalize;
     font-weight: bold;
     font-style: normal;

@@ -7,11 +7,11 @@ const Background = () => {
         <div className={styles.container}>
             <div className={styles.glassmorphism}></div>
             {/* // the pink circle */}
-            <div className={styles['circle-2']}></div>
+            <div className={styles['circle-2']} loading='eager'></div>
             {/* // the cyan circle */}
-            <div className={styles['circle-3']}></div>
+            <div className={styles['circle-3']} loading='eager'></div>
             {/* // the purple circle */}
-            <div className={styles['circle-1']}></div> 
+            <div className={styles['circle-1']} loading='eager'></div>
         </div>
     )
 }

@@ -71,7 +71,7 @@ export default function Home() {
                 src={images.circle1}
                 alt="circle-1"
                 className={styles['circle-1']}
-                loading="lazy"
+                loading="eager"
               />
               <div className={styles['stats__1']}>
                 <CountUp start={0} end={200} delay={0}
@@ -92,13 +92,13 @@ export default function Home() {
                 src={images.circle2}
                 alt="circle-2"
                 className={styles['circle-2']}
-                loading="lazy"
+                loading="eager"
               />
               <Image
                 src={images.circle3}
                 alt="circle-2"
                 className={styles['circle-3']}
-                loading="lazy"
+                loading="eager"
               />
               <CountUp start={0} end={600} delay={0}
                 enableScrollSpy={true}

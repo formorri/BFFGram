@@ -37,7 +37,7 @@ export default function Home() {
                             src={images.circle1}
                             alt="circle-1"
                             className={styles['circle-1']}
-                            loading="lazy"
+                            loading="eager"
                         />
                     </div>
                     <div className={styles['hero__grid--column2']}>
@@ -61,7 +61,7 @@ export default function Home() {
                             src={images.circle3}
                             alt="circle-3"
                             className={styles['circle-3']}
-                            loading="lazy"
+                            loading="eager"
                         />
                     </div>
                 </Grid13>

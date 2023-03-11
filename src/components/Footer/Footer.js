@@ -31,6 +31,38 @@ import { API } from 'aws-amplify'
 import { createCandidate } from '../../graphql/mutations'
 
 
+const socials = [
+  {
+    href: 'https://www.linkedin.com/company/the-bff-gram/',
+    icon: <LinkedInIcon />
+  },
+  {
+    href: 'https://twitter.com/OfficialBffGram',
+    icon: <TwitterIcon />
+  },
+  {
+    href: 'https://www.instagram.com/invites/contact/?i=v777t1mecqqp&utm_content=76l7sbn',
+    icon: <InstagramIcon />
+  },
+  {
+    href: 'Team.thebffgram@gmail.com',
+    icon: <FontAwesomeIcon icon={faDiscord} />
+  },
+  {
+    href: 'https://t.me/bffgramofficial',
+    icon: <TelegramIcon />
+  },
+  {
+    href: 'https://www.youtube.com/@bffgram',
+    icon: <YouTubeIcon />
+  },
+  {
+    href: 'https://t.snapchat.com/UCf6B9na',
+    icon: <FontAwesomeIcon icon={faSnapchat} />
+  }
+];
+
+
 const Input = styled(OutlinedInput)({
   border: '2px solid #CFCFCF',
   color: '#CFCFCF',
@@ -112,19 +144,19 @@ const Footer = () => {
           src={images.circle1}
           alt="circle1"
           className={styles['circle-1']}
-          loading="lazy"
+          loading="eager"
         />
         <Image
           src={images.circle2}
           alt="circle2"
           className={styles['circle-2']}
-          loading="lazy"
+          loading="eager"
         />
         <Image
           src={images.circle3}
           alt="circle3"
           className={styles['circle-3']}
-          loading="lazy"
+          loading="eager"
         />
       </div>
       <div className={styles.grid}>
@@ -259,41 +291,13 @@ const Footer = () => {
                 <h2>Socials</h2>
               </div>
               <ul className={styles.socials}>
-                <li>
-                  <Link target='_blank' rel="nofollow" href='https://www.linkedin.com/company/the-bff-gram/'>
-                    <LinkedInIcon></LinkedInIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link target='_blank' rel="nofollow" href='https://twitter.com/OfficialBffGram'>
-                    <TwitterIcon></TwitterIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link target='_blank' rel="nofollow" href='https://www.instagram.com/invites/contact/?i=v777t1mecqqp&utm_content=76l7sbn'>
-                    <InstagramIcon></InstagramIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link target='_blank' rel="nofollow" href='Team.thebffgram@gmail.com'>
-                    <FontAwesomeIcon icon={faDiscord} />
-                  </Link>
-                </li>
-                <li>
-                  <Link target='_blank' rel="nofollow" href='https://t.me/bffgramofficial'>
-                    <TelegramIcon></TelegramIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link target='_blank' rel="nofollow" href='https://www.youtube.com/@bffgram'>
-                    <YouTubeIcon></YouTubeIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link target='_blank' rel="nofollow" href='https://t.snapchat.com/UCf6B9na'>
-                    <FontAwesomeIcon icon={faSnapchat} />
-                  </Link>
-                </li>
+                {socials.map((social, index) => (
+                  <li key={index}>
+                    <Link href={social.href} target='_blank' rel='nofollow'>
+                      <span className={styles.icon}>{social.icon}</span>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </Card>
           </div>

@@ -20,7 +20,7 @@ const Navbar = () => {
                     src={images.logo}
                     alt="bffgram-logo"
                     className={styles['logo']}
-                    loading="lazy"
+                    loading="eager"
                 />
             </Link>
             <div className={styles["phone"]}>
