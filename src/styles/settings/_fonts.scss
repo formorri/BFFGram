@@ -81,9 +81,7 @@ $url:'../../../public/fonts/' ;
 @mixin font-settings($desktop-font-size) {
     font-size: calc($desktop-font-size * $small-font);
     line-height: calc(($desktop-font-size * $small-font) * $line-height-multiplier);
-    // h2{
-    //     margin: 0;
-    // }
+
 
     @include gt-xs {
         font-size: $desktop-font-size;

@@ -59,6 +59,7 @@
     border: $border-weight $white-primary;
     border-radius: $border-radiusx2;
     width: 100%;
+    height: 100%;
 
     .error {
       @include paragraph-light-secondary-text;
@@ -72,7 +73,7 @@
 
     &__header {
 
-      &--text{
+      &--text {
         margin: 0;
         @include header-text;
       }
@@ -175,7 +176,7 @@
           border-left: $border-weight $white-primary;
           width: $second-column;
           padding-left: 2rem;
-          
+
           li {
 
             a {
@@ -202,40 +203,18 @@
           }
         }
 
-        .email{
+        .email {
           text-transform: lowercase;
         }
       }
     }
 
-    // .contacts {
-    //   ul {
-    //     display: flex;
-    //     column-gap: 0.1rem;
-
-    //     li {
-    //       a {
-    //         svg {
-    //           height: 1.5rem;
-    //           width: auto;
-    //         }
-    //       }
-
-    //       &:hover {
-    //         a {
-    //           svg {
-    //             color: $circle-3;
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-    .socials{
+    .socials {
       display: flex;
-      column-gap: 1rem;
-      .icon{
-        svg{
+      column-gap: 0.1rem;
+
+      .icon {
+        svg {
           width: 1.4rem;
           height: auto;
         }
@@ -285,14 +264,20 @@
     }
   }
 
-  .info {
-    $row-gap: 1rem;
-    row-gap: $row-gap;
-    .socials{
-      .icon{
-        svg{
-          width: 3rem;
-          height: auto;
+}
+
+@include gt-xs{
+  .container{
+    .info{
+      .socials {
+        display: flex;
+        column-gap: 0.5rem;
+  
+        .icon {
+          svg {
+            width: 2rem;
+            height: auto;
+          }
         }
       }
     }
@@ -308,14 +293,14 @@
         top: 40rem;
         left: 30rem;
       }
-  
+
       .circle-2 {
         width: 20rem;
         height: auto;
         left: 42rem;
         top: -14rem;
       }
-  
+
       .circle-3 {
         width: 10rem;
         height: auto;
@@ -324,24 +309,8 @@
       }
     }
 
-    // .info {
-    //   &__info {
-    //     .text {
-    //       ul {
-    //         column-gap: 1rem;
-    //         li {
-    //           a {
-    //             svg {
-    //               height: 4rem;
-    //               width: auto;
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
   }
+
 }
 
 @include gt-md {
@@ -382,41 +351,27 @@
       place-items: center;
     }
 
-
-    // .form-position,
-    // .sitemap-position,
-    // .address-position,
-    // .email-position,
-    // .contact-position,
-    // .top-position{
-    //   height: 100%;
-    // }
-
-    .form-position{
+    .form-position {
       grid-area: 1 / 1 / 3 / 3;
     }
 
-    .sitemap-position{
+    .sitemap-position {
       grid-area: 1 / 3 / 2 / 5;
     }
 
-    .address-position{
+    .address-position {
       grid-area: 2 / 4 / 3 / 5;
     }
 
-    // .email-position{
-    //   grid-area: 2 / 1 / 3 / 2;
-    // }
-
-    .contact-position{
+    .contact-position {
       grid-area: 2 / 3 / 3 / 4;
     }
 
-    .socials-position{
+    .socials-position {
       grid-area: 3 / 3 / 4 / 5;
     }
 
-    .top-position{
+    .top-position {
       grid-area: 3 / 1 / 4 / 3;
     }
 
@@ -436,11 +391,11 @@
         flex-direction: column;
         row-gap: $gap;
         justify-content: center;
-        
+
         &>div {
           column-gap: $gap;
         }
-        
+
         .text {
           height: 100%;
           flex-direction: column;
@@ -466,11 +421,12 @@
         }
       }
 
-      .socials{
+      .socials {
         display: flex;
         font-size: 5rem;
-        .icon{
-          svg{
+
+        .icon {
+          svg {
             width: 3rem;
             height: auto;
           }
@@ -497,20 +453,22 @@
   }
 }
 
-@include gt-lg{
+@include gt-lg {
   $button-size: 8rem;
+
   .container {
     padding: $large-padding $extra-large-padding;
-    .info{
+
+    .info {
       .back-to-top {
         width: $button-size;
         height: $button-size;
-  
+
         .scroll {
           width: $button-size;
           height: $button-size;
           padding: 1rem;
-  
+
           svg {
             $size: 2rem;
             width: $size;

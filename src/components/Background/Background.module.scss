@@ -2,8 +2,8 @@
 
 $circle-size: 60px;
 .container {
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
     position: fixed;
     top: 0;
     background-color: $white-primary;
@@ -19,8 +19,8 @@ $circle-size: 60px;
     .glassmorphism{
         position: absolute;
         @include glassmorphism;
-        min-height: 100vh;
-        min-width: 100vw;
+        height: 100vh;
+        width: 100vw;
         z-index: 0;
     }
 
