@@ -44,10 +44,10 @@ const socials = [
     href: 'https://www.instagram.com/invites/contact/?i=v777t1mecqqp&utm_content=76l7sbn',
     icon: <InstagramIcon />
   },
-  {
-    href: 'Team.thebffgram@gmail.com',
-    icon: <FontAwesomeIcon icon={faDiscord} />
-  },
+  // {
+  //   href: 'Team.thebffgram@gmail.com',
+  //   icon: <FontAwesomeIcon icon={faDiscord} />
+  // },
   {
     href: 'https://t.me/bffgramofficial',
     icon: <TelegramIcon />
